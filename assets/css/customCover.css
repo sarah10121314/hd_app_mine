@@ -1,0 +1,6 @@
+/*《EC工程用户自定义覆盖bootstrap原来样式CSS编写》*/
+.form-cover {
+    background-color: #ECEDEE;
+    border: 1px solid #ECEDEE;
+    color: #555555;
+}

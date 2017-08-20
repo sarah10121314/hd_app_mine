@@ -1,0 +1,166 @@
+.tag_fixed{
+	position:fixed;
+	right:0px;
+	top:15%;
+	width:48px;
+	height:auto;
+	z-index:1000;
+}
+
+.tag_div{
+	width:42px;
+	height:50px;
+	margin:10px auto;
+}
+
+.tag_i{
+	width:20px;
+	height:16px;
+	display:inline-block;
+}
+
+	
+.baseInfo_div{
+		background:url(../images/plan_tag/info.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.baseInfo_i{
+		background:url(../images/plan_tag/small/info.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.detailsInfo_div{
+		background:url(../images/plan_tag/detailsInfo.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+}
+
+.detailsInfo_i{
+		background:url(../images/plan_tag/small/detailsInfo.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+}
+
+.sumup_div{
+		background:url(../images/plan_tag/sumup.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.sumup_i{
+		background:url(../images/plan_tag/small/sumup.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.commond_div{
+		background:url(../images/plan_tag/commond.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.commond_i{
+		background:url(../images/plan_tag/small/commond.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.im_div{
+		background:url(../images/plan_tag/im.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.im_i{
+		background:url(../images/plan_tag/small/im.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.map_div{
+		background:url(../images/plan_tag/map.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.map_i{
+		background:url(../images/plan_tag/small/map.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.resourse_div{
+		background:url(../images/plan_tag/resourse.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.resourse_i{
+		background:url(../images/plan_tag/small/resourse.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.screen_config_div{
+		background:url(../images/plan_tag/screen_config.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.screen_config_i{
+		background:url(../images/plan_tag/small/screen_config.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.screen_data_div{
+		background:url(../images/plan_tag/screen_data.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.screen_data_i{
+		background:url(../images/plan_tag/small/screen_data.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.workflow_div{
+		background:url(../images/plan_tag/workflow.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+	
+.workflow_i{
+		background:url(../images/plan_tag/small/workflow.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+	}
+	
+.log_div{
+		background:url(../images/plan_tag/log.png);
+		-moz-background-size:100% 100%; /* 老版本的 Firefox */
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+}
+
+.log_i{
+		background:url(../images/plan_tag/small/log.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+}
+	
+	
