@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/bootstrap-datetimepicker.css">
+</head>
+<body>
+	<div class="input-append date form_datetime">
+    <input size="16" type="text" readonly>
+    <span class="add-on"><i class="icon-th"></i></span>
+</div>
+</body>
+<script src="jquery.js"></script>
+<script src="./js/bootstrap-datetimepicker.js"></script>
+<script src="./js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+	$(".form_datetime").datetimepicker({
+		language:  'zh-CN',
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left"
+    });
+</script>
+</html>
