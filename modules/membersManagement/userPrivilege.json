@@ -1,0 +1,30 @@
+{
+	"data":
+	     [
+		    {
+		           "ID": "ID",
+		           "privilegeId": "特权ID",
+		           "privilegeDes": "特权说明sit asi a corporis quisquam minima in quidem ipsum"
+		    },
+		    {
+		           "ID": "ID",
+		           "privilegeId": "特权ID",
+		           "privilegeDes": "特权说明lor veritatis" 
+		    },
+		    {
+		           "ID": "ID",
+		           "privilegeId": "特权ID",
+		           "privilegeDes": "特权说明1um."
+		    },
+		    {
+		           "ID": "ID",
+		           "privilegeId": "特权ID",
+		           "privilegeDes": "特权说明m."
+		    },
+		    {
+		           "ID": "ID",
+		           "privilegeId": "特权ID",
+		           "privilegeDes": "特权说明um."
+		    }
+	     ]
+}

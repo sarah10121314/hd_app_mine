@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "message": "",
+    "data":
+    {
+        "freightDetail":
+        {
+               "TravelId": "65433456",
+               "publisher": "张三",
+               "ableGoods": "农作物、金属",
+               "unableGoods": "水产品",
+               "startingDate": "2017/12/12 12:12:12",
+               "departure": "南京",
+               "destination": "深圳",
+               "heightLimit": "3m",
+               "maxLoad": "5t",
+               "vehicleStatus": "0",
+               "vehicleInfo": "火车",
+               "remarks": "不可装水产品",
+               "phone": "12344321",
+               "wayLocation":
+               [
+                      "南京",
+                      "上海",
+                      "深圳"
+               ]
+        }
+
+    }
+}

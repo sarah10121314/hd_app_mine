@@ -1,0 +1,319 @@
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="../../assets/images/favicon.png"
+          type="image/png">
+    <title>外联资源管理</title>
+    <link rel="stylesheet" href="orderList.css">
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <link href="../../assets/css/ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="ui1.css">-->
+    <script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+    <link href="../../assets/plugins/rateit/rateit.css" rel="stylesheet">
+    <script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(48,48,48,0.8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px 25px 15px 5px;border: none;z-index: 10000;}.jqsfield { color: white;font: 11px arial, san serif;text-align: center;}</style>
+</head>
+<body class="">
+<section id="section">
+    <div class="main-content main-content-page" id="order_list">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content">
+
+            <div class="header">
+                <h2>
+                    <strong>订单管理</strong>
+                </h2>
+                <div class="breadcrumb-wrapper">
+                    <span id="expertHover" data-toggle="modal" data-target="#function_declaration_Modal" data-backdrop=""><i class="icon-question"></i></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-content pagination2">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="head">
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 form-inline "style="text-align: right">
+                                                <div class="control-select col-sm-3">
+                                                    <select class="form-control" id="orderType">
+                                                        <option value="0">家政</option>
+                                                        <option value="2">服务类别</option>
+                                                        <option value="1">货运</option>
+                                                    </select>
+                                                </div>
+                                                <div class="control-select col-sm-3">
+                                                    <select class="form-control" id="orderStatus">
+                                                        <option>服务状态</option>
+                                                        <option value="2">已完成</option>
+                                                        <option value="0">服务中</option>
+                                                        <option value="1">已支付</option>
+                                                        <option value="3">已删除</option>
+                                                        <option value="4">已取消</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="control-select col-sm-3" style="padding:0px;">
+                                                    <label class="control-label col-sm-4 p-0" style="margin-top:8px;float:left">开始时间:</label>
+                                                    <input class="form-control test col-sm-8" id="search_startDate" size="16" type="text">
+                                                    <label class="control-label col-sm-6 p-0 fb" id="startDatefb"></label>
+                                                        <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                                                        <!--<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>-->
+                                                </div>
+                                                <!--<div class="control-select col-sm-1">-->
+                                                    <!--<span>-</span>-->
+                                                <!--</div>-->
+                                                <div class="control-select col-sm-3">
+                                                    <label class="control-label col-sm-4 p-0" style="margin-top:8px">结束时间:</label>
+                                                    <input class="form-control test col-sm-8" id="search_finishDate" size="16" type="text">
+                                                        <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                                                        <!--<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>-->
+                                                </div>
+                                            </div>
+                                            <div  class="form-group col-sm-12 form-inline ">
+                                                <div class="col-sm-3 control-select ">
+                                                    <label class="control-label col-sm-4 p-0" style="margin-top:8px">订单号:</label>
+                                                    <input id="searchKey_orderNumber" class="form-control" placeholder="输入订单号..." type="text">
+                                                    <!--<i class="icon-magnifier"></i>-->
+                                                </div>
+                                                <div class="col-sm-3 control-select ">
+                                                    <label class="control-label col-sm-4 p-0" style="margin-top:8px">接单人:</label>
+                                                    <input id="searchKey_taker" class="form-control" placeholder="搜索接单人..." type="text">
+                                                    <!--<i class="icon-magnifier"></i>-->
+                                                </div>
+                                                <div class="col-sm-3 control-select ">
+                                                    <label class="control-label col-sm-4 p-0" style="margin-top:8px">下单人:</label>
+                                                    <input id="searchKey_payer" class="form-control" placeholder="搜索下单人..." type="text">
+                                                    <!--<i class="icon-magnifier"></i>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-striped dataTable"
+                                           id="leftTable" width="100%">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+</section>
+<!-- BEGIN PRELOADER -->
+<div class="loader-overlay">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script type="text/javascript" src="../../assets/plugins/rateit/jquery.rateit.min.js"></script>
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+<script src="../../assets/js/ec-common.js"></script>
+<script src="../../assets/js/webapi.js"></script>
+<script type="text/javascript" src="orderList.js"></script>
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+
+<div class="main-content main-content-page" id="order_detail" style="display:none">
+    <div class="page-content">
+        <div class="page-header">
+            <h4><strong>订单详情</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="orderList.html">返回订单列表</a></font></h4>
+        </div>
+        <div class="row-fluid " style="background-color:white;">
+            <form id="menu_addButton_addButtonForm" class="form-horizontal" style="padding:10px 50px 10px 50px;">
+                <input type="hidden" id="userId" name="userId" value="1abd24ff81f34d779901b09d7d7a34b8">
+                <input type="hidden" id="resid" name="resid">
+                <div class="form-control" style="margin-left:-50px;background-color:white;border:none">
+                    <label class="col-sm-1 control-label" style="text-align:right;color:#0a6aa1;font-weight:500">订单信息</label>
+                    <label class="col-sm-11 control-label" style="margin-top:8px;height:2px;background-color:darkgrey;"></label>
+                </div>
+                <div class="form-group" style="margin-left:70px">
+                    <label class="col-sm-1 control-label">订单号：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderNumber">null</label>
+                    <label class="col-sm-1 control-label">服务类型：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderType">null</label>
+                    <label class="col-sm-1 control-label">下单时间：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderCreateDate">null</label>
+
+                </div>
+                <div class="form-group" style="margin-left:70px">
+                    <label class="col-sm-1 control-label">下单人：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_payer">null</label>
+                    <label class="col-sm-1 control-label">联系电话：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_phone">null</label>
+                    <label class="col-sm-1 control-label">预计金额：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_price">null</label>
+                </div>
+                <div class="form-group" style="margin-left:70px">
+                    <label class="col-sm-1 control-label">接单人：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;border-bottom:2px darkgrey" id="d_orderTaker"></label>
+                    <label class="col-sm-1 control-label">接单时间：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderTakeDate"></label>
+                </div>
+                <div class="form-group" style="margin-left:70px">
+                    <label class="col-sm-1 control-label">服务地址：</label>
+                    <label class="col-sm-8 control-label txt" style="text-align: left;" id="d_address">null</label>
+                </div>
+                <div class="form-group" style="margin-left:70px">
+                    <label class="col-sm-1 control-label" id="d_predate">完成时间：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderFinishDate"></label>
+                    <label class="col-sm-1 control-label" >订单状态：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_orderStatus"></label>
+                </div>
+                <div class="form-control d_freight" style="margin-left:-50px;background-color:white;border:none;display:none">
+                    <label class="col-sm-1 control-label" style="text-align:right;color:#0a6aa1;font-weight:500">货运信息</label>
+                    <label class="col-sm-11 control-label" style="margin-top:8px;height:2px;background-color:darkgrey;"></label>
+                </div>
+                <div class="form-group d_freight" style="margin-left:70px;margin-top:10px;display:none" id="travel_detail">
+                    <div class="form-group freight_det" style="margin-left:0px;">
+                        <label class="col-sm-1 control-label">车辆信息：</label>
+                        <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_vehicle">null</label>
+                        <label class="col-sm-1 control-label">出发地：</label>
+                        <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_departure">null</label>
+                        <label class="col-sm-1 control-label">目的地：</label>
+                        <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_destination">null</label>
+                    </div>
+                    <div class="form-group freight_det" style="margin-left:0px;">
+                        <label class="col-sm-1 control-label" style="text-align:left">货物信息：</label>
+                        <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_goodsInfo"></label>
+                        <label class="col-sm-1 control-label">货物备注：</label>
+                        <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_goodsRemark"></label>
+                    </div>
+                </div>
+
+                <div class="form-control d_pay" style="margin-left:-50px;background-color:white;border:none;display:none">
+                    <label class="col-sm-1 control-label" style="text-align:right;color:#0a6aa1;font-weight:500">付款信息</label>
+                    <label class="col-sm-11 control-label" style="margin-top:8px;height:2px;background-color:darkgrey;"></label>
+                </div>
+                <div class="form-group d_pay" id="orderDetail_payInfo" style="margin-left:70px;display:none">
+                    <label class="col-sm-1 control-label">付款方式：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left" id="d_payType">未付款</label>
+                    <label class="col-sm-1 control-label">流水号：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_payId">123</label>
+                    <label class="col-sm-1 control-label">支付额：</label>
+                    <label class="col-sm-2 control-label txt" style="text-align: left;" id="d_payPrice">123</label>
+                </div>
+                <div class="panel-content d_comment" style="padding-left:0;width:90%;margin:0px auto;display:none">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1_1" data-toggle="tab">客户评价</a></li>
+                        <li class=""><a href="#tab1_2" data-toggle="tab">服务方评价</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="col-md-12" style="text-align:right">
+                            <div class="form-group">
+
+                                <div class="m-b-10 comment">
+                                    <label class="form-label col-sm-1">评价星级:</label>
+                                    <div class="rateit col-sm-3" data-value="0" data-max="5">
+                                        <!--<button id="rateit-reset-2" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2" style="display: none;"></button>-->
+                                        <div id="rateit-range-1" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-1" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0" aria-readonly="true" style="width: 90px; height: 16px;">
+                                            <div class="rateit-selected" style="height: 16px; width: 62.4px; display: block;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade active in form-group" id="tab1_1">
+                            <div class="col-md-6 form-group">
+                                <p class="light form-group" id="d_cusComment">default, the textarea element comes with a vertical scrollbar (and maybe even a horizontal scrollbar). This vertical scrollbar enables the user to continue entering and reviewing their text (by scrolling up and down).</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade form-group" id="tab1_2">
+                            <div class="col-md-6 form-group">
+                                <p class="light form-group" id="d_busComment">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="layui-layer-shade" id="layui-layer-shade1" times="1" style="z-index:19891014; background-color:#000; opacity:0.3;display:none; filter:alpha(opacity=30);">
+</div>
+<div class="layui-layer layui-layer-dialog  layer-anim" id="layui-layer1" type="dialog" times="1" showtime="0" contype="string" style="z-index: 19891015; top: 233px; left: 726px;display:none">
+    <div class="layui-layer-title" style="cursor: move;background-color:blue" move="ok">信息</div>
+    <div id="" class="layui-layer-content">是否删除？</div>
+    <span class="layui-layer-setwin">
+        <a class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;"></a>
+    </span>
+    <div class="layui-layer-btn">
+        <a class="layui-layer-btn0">确定</a>
+        <a class="layui-layer-btn1">取消</a>
+    </div>
+</div>
+</body>
+</html>

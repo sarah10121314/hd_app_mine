@@ -1,0 +1,64 @@
+{
+      
+     "data":
+     [
+            {
+                   "countingParasId": "计费参数ID",
+                   "city": "城市",
+                   "type": "类型",
+                   "mileageFee": "里程费",
+                   "durationFee": "时长费",
+                   "minFee": "最低消费",
+                   "longDistanceFee": "远程费",
+                   "nightFee": "夜间费",
+                   "dispatchFee": "动态调度费"
+            },
+            {
+                   "countingParasId": "计费参数ID",
+                   "city": "城市",
+                   "type": "类型",
+                   "mileageFee": "里程费",
+                   "durationFee": "时长费",
+                   "minFee": "最低消费",
+                   "longDistanceFee": "远程费",
+                   "nightFee": "夜间费",
+                   "dispatchFee": "动态调度费"
+            },
+            {
+                   "countingParasId": "计费参数ID",
+                   "city": "城市",
+                   "type": "类型",
+                   "mileageFee": "里程费",
+                   "durationFee": "时长费",
+                   "minFee": "最低消费",
+                   "longDistanceFee": "远程费",
+                   "nightFee": "夜间费",
+                   "dispatchFee": "动态调度费"
+            },
+            {
+                   "countingParasId": "计费参数ID",
+                   "city": "城市",
+                   "type": "类型",
+                   "mileageFee": "里程费",
+                   "durationFee": "时长费",
+                   "minFee": "最低消费",
+                   "longDistanceFee": "远程费",
+                   "nightFee": "夜间费",
+                   "dispatchFee": "动态调度费"
+            },
+            {
+                   "countingParasId": "计费参数ID",
+                   "city": "城市",
+                   "type": "类型",
+                   "mileageFee": "里程费",
+                   "durationFee": "时长费",
+                   "minFee": "最低消费",
+                   "longDistanceFee": "远程费",
+                   "nightFee": "夜间费",
+                   "dispatchFee": "动态调度费"
+            }
+     ],
+      
+      "code": 0,
+      "messages": "查询成功"
+}

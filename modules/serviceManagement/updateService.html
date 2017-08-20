@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息修改</title>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <!--<link href="../../assets/css/ui.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="updateService.css">
+    <!--<link rel="stylesheet" href="ui1.css">-->
+    <script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <style>
+        label{
+            margin-top:8px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu_addButton_addButtonForm" class="form-horizontal">
+    <input type="hidden" id="userId" name="userId" value="0">
+    <input type="hidden" id="resid" name="resid" value="">
+
+
+
+</div>
+<div class="main-content-page main-content" style="background-color:white;">
+    <div class="page-content" >
+        <div class="page-header form-group" style="margin-top: 20px;">
+            <h4><strong>修改服务</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="serviceList.html">返回服务列表</a></font></h4>
+            <!--<div class="page-header" style="margin-top: 20px;">-->
+
+        </div>
+
+        <div style="padding:10px 30px 10px 30px;background-color:white;border-radius:5px">
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label">服务名称：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="serviceName" readonly="readonly" class="form-control" name="userName">
+                    <span id="serviceNamefb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <label id="loginName" style="color:red;"></label>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">服务类型：</label>
+                <div class="control-select col-sm-3">
+                    <input type="text" id="serviceType" readonly="readonly" class="form-control" name="userName">
+                    <span id="serviceTypefb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <!--<label id="pwdName" style="color:red;">密码不能为空且密码为6到10位</label>-->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户名：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="serviceProvider" readonly="readonly" class="form-control col-sm-2">
+                    <span id="serviceProviderfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <label id="pwdName2" style="color:red;"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">服务状态：</label>
+                <div class="col-sm-3 ">
+                    <select class="form-control" id="serviceStatus">
+                        <option value="0">正常</option>
+                        <option value="1">禁止</option>
+                        <option value="2">已删除</option>
+                        <option value="3">已下架</option>
+                    </select>
+                    <span id="serviceStatusfb" class="form-control-feedback"></span>
+                </div>
+                <label class="col-sm-2 control-label offshelf">下架原因：</label>
+                <div class="col-sm-3 has-feedback offshelf">
+                    <input type="text" id="offshelfReason" readonly="readonly" class="form-control col-sm-2">
+                    <span id="offshelfReasonfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">*</label>
+                <label id="trueName" style="color:red;"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">服务有效期：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="serviceDuration" readonly="readonly" class="form-control" name="realName">
+                    <span id="sexFeedBack" class="form-control-feedback col-sm-2"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label" id="lab_price">剩余时间：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="remainTime" class="form-control" name="mobile" >
+                    <span id="mobileFeedBack" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">*</label>
+                <label id="mobileName" style="color:red;"></label>
+            </div>
+
+            <div class=" form-group travelInfo home"  style="display:none">
+
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-2 control-label ft">服务标签：</label>
+                    <div class="col-sm-3 has-feedback">
+                        <input type="text" id="serviceTags" readonly="readonly" class="form-control" name="realName">
+                        <span id="serviceTagsfb" class="form-control-feedback col-sm-2"></span>
+                    </div>
+                    <label style="color:red; font-size:x-large">&nbsp;</label>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-2 control-label ft">价格：</label>
+                    <div class="col-sm-3 has-feedback">
+                        <input type="text" id="price" readonly="readonly" class="form-control" name="realName">
+                        <span id="pricefb" class="form-control-feedback col-sm-2"></span>
+                    </div>
+                    <label style="color:red; font-size:x-large">&nbsp;</label>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-2 control-label ft">平台注册费：</label>
+                    <div class="col-sm-3 has-feedback">
+                        <input type="text" id="registerPrice" readonly="readonly" class="form-control" name="realName">
+                        <span id="registerPricefb" class="form-control-feedback col-sm-2"></span>
+                    </div>
+                    <label style="color:red; font-size:x-large">&nbsp;</label>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-2 control-label ft">地址：</label>
+                    <div class="col-sm-3 has-feedback">
+                        <input type="text" id="address" readonly="readonly" class="form-control" name="realName">
+                        <span id="addressfb" class="form-control-feedback col-sm-2"></span>
+                    </div>
+                    <label style="color:red; font-size:x-large">&nbsp;</label>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-2 control-label">电话：</label>
+                    <div class="col-sm-3 has-feedback">
+                        <input type="text" id="phone"  readonly="readonly" class="form-control" name="realName">
+                        <span id="phonefb" class="form-control-feedback col-sm-2"></span>
+                    </div>
+                    <label style="color:red; font-size:x-large">&nbsp;</label>
+                </div>
+                <div class="form-group upcomment" style="">
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1_1" data-toggle="tab" onclick="tabChange(0)"><strong>简介</strong></a></li>
+                    </ul>
+                    <div class="tab-content form-group">
+                        <div class="tab-pane fade active in form-group" id="tab1_1">
+                            <textarea class="form-control " readonly="readonly" id="introduction"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <button class="btn btn-primary" id="update_submit" >提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+<script src="../../js/ec-common.js"></script>
+<script src="../../js/webapi.js"></script>
+<script type="text/javascript" src="updateOrder.js"></script>
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+</body>
+</html>

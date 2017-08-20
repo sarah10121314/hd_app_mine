@@ -1,0 +1,40 @@
+ {
+     
+	     "data":[
+	            {
+	                   "levelId": "等级ID",
+	                   "levelName": "等级名称",
+	                   "consumptRange":
+	                   {
+	                          "maxConsumption": "10000",
+	                          "minConsumption": "500"
+	                   },
+	                   "privilegeId": "特权ID",
+	                   "privilegeDes": "特权说明"
+	            },
+	            {
+	                   "levelId": "等级ID",
+	                   "levelName": "等级名称",
+	                   "consumptRange":
+	                   {
+	                          "maxConsumption": "20000",
+	                          "minConsumption": "1500"
+	                   },
+	                   "privilegeId": "特权ID",
+	                   "privilegeDes": "特权说明"
+	            },
+	            {
+	                   "levelId": "等级ID",
+	                   "levelName": "等级名称",
+	                   "consumptRange":
+	                   {
+	                          "maxConsumption": "30000",
+	                          "minConsumption": "2500"
+	                   },
+	                   "privilegeId": "特权ID",
+	                   "privilegeDes": "特权说明"
+	            }
+	    ]
+     
+     
+ }

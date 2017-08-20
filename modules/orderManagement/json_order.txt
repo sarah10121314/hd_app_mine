@@ -1,0 +1,50 @@
+{
+    "data":{
+        "list":
+            [
+
+                        {
+                            "orderId":"1",
+                            "ordernumber": "121212",
+                            "serviceName": "保洁",
+                            "serviceType": "家政",
+                            "payer": "张三",
+                            "orderTaker": "李四",
+                            "orderStatus": "服务中",
+                            "price": "25",
+                            "orderCreateDate": "2017/7/25-13:12:12",
+                            "orderTakeDate": "2017/7/25-13:12:12",
+                            "address": "江苏南京",
+                            "authInfo": "认证信息"
+                        },
+                        {
+                            "orderId":"2",
+                            "ordernumber": "121213",
+                            "serviceName": "保洁",
+                            "serviceType": "家政",
+                            "payer": "张三",
+                            "orderTaker": "李四",
+                            "orderStatus": "服务中",
+                            "price": "25",
+                            "orderCreateDate": "2017/7/25-13:12:12",
+                            "orderTakeDate": "2017/7/25-13:12:12",
+                            "address": "江苏南京",
+                            "authInfo": "认证信息"
+                        },
+                        {
+                            "orderId":"3",
+                            "ordernumber": "121214",
+                            "serviceName": "保洁",
+                            "serviceType": "家政",
+                            "payer": "张三",
+                            "orderTaker": "李四",
+                            "orderStatus": "服务中",
+                            "price": "25",
+                            "orderCreateDate": "2017/7/25-13:12:12",
+                            "orderTakeDate": "2017/7/25-13:12:12",
+                            "address": "江苏南京",
+                            "authInfo": "认证信息"
+                        }
+             ]
+       }
+ }

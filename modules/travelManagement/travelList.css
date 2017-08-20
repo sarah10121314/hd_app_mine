@@ -1,0 +1,18 @@
+#d_remarks{
+    border:1px solid darkgrey;
+    padding-right:20px;
+    //min-width:150px;
+    min-height:45px;
+}
+.txt{
+    //color:darkgrey !important;
+    font-family:"Microsoft YaHei", "Lato", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    border-bottom:1px solid darkgrey;
+}
+.fb{
+    color:red;
+    font-size:12px;
+    text-align:right !important;
+    margin-left:60px;
+}

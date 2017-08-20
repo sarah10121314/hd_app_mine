@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/png">
+		<title>海道APP管理系统 HDMS 1.0</title>
+		<link href="../../assets/css/style.css" rel="stylesheet">
+		<link href="../../assets/css/theme.css" rel="stylesheet">
+		<link href="../../assets/css/ui.css" rel="stylesheet">
+		<!-- BEGIN PAGE STYLE -->
+		<link href="../../assets/plugins/metrojs/metrojs.min.css" rel="stylesheet">
+		<link href="../../assets/plugins/maps-amcharts/ammap/ammap.min.css" rel="stylesheet">
+		<link href="../../assets/plugins/jmsgbox/css/jquery.msgbox.css" rel="stylesheet" type="text/css" />
+		<!-- END PAGE STYLE -->
+		<script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+	<!-- LAYOUT: Apply "submenu-hover" class to body element to have sidebar submenu show on mouse hover -->
+	<!-- LAYOUT: Apply "sidebar-collapsed" class to body element to have collapsed sidebar -->
+	<!-- LAYOUT: Apply "sidebar-top" class to body element to have sidebar on top of the page -->
+	<!-- LAYOUT: Apply "sidebar-hover" class to body element to show sidebar only when your mouse is on left / right corner -->
+	<!-- LAYOUT: Apply "submenu-hover" class to body element to show sidebar submenu on mouse hover -->
+	<!-- LAYOUT: Apply "fixed-sidebar" class to body to have fixed sidebar -->
+	<!-- LAYOUT: Apply "fixed-topbar" class to body to have fixed topbar -->
+	<!-- LAYOUT: Apply "rtl" class to body to put the sidebar on the right side -->
+	<!-- LAYOUT: Apply "boxed" class to body to have your page with 1200px max width -->
+
+	<!-- THEME STYLE: Apply "theme-sdtl" for Sidebar Dark / Topbar Light -->
+	<!-- THEME STYLE: Apply  "theme sdtd" for Sidebar Dark / Topbar Dark -->
+	<!-- THEME STYLE: Apply "theme sltd" for Sidebar Light / Topbar Dark -->
+	<!-- THEME STYLE: Apply "theme sltl" for Sidebar Light / Topbar Light -->
+
+	<!-- THEME COLOR: Apply "color-default" for dark color: #2B2E33 -->
+	<!-- THEME COLOR: Apply "color-primary" for primary color: #319DB5 -->
+	<!-- THEME COLOR: Apply "color-red" for red color: #C9625F -->
+	<!-- THEME COLOR: Apply "color-green" for green color: #18A689 -->
+	<!-- THEME COLOR: Apply "color-orange" for orange color: #B66D39 -->
+	<!-- THEME COLOR: Apply "color-purple" for purple color: #6E62B5 -->
+	<!-- THEME COLOR: Apply "color-blue" for blue color: #4A89DC -->
+	<!-- BEGIN BODY -->
+
+	<body class="fixed-topbar fixed-sidebar theme-sdtl color-default" style="overflow-y: hidden; overflow-x: hidden;">
+		<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+		<section>
+			<!-- BEGIN SIDEBAR -->
+			<div class="sidebar">
+				<div class="logopanel" style="padding: 0px;">
+					<h1>
+          <!--<a href="dashboard.html" style="height:50px"></a>-->
+        </h1>
+				</div>
+				<div class="sidebar-inner">
+					<div class="menu-title  p-5">
+						<!--<H5 class="m-0 m-l-10 c-gray">导航
+            <div class="pull-right menu-settings">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="300"> 
+	              <i class="icon-settings"></i>
+	              </a>
+            </div>
+          </H5>-->
+					</div>
+					<ul class="nav nav-sidebar">
+						<li class="nav-active active">
+							<!--<a url="../membersManagement/usersManagement.html" icon="icon-home" href="javascript:void(0)"><i class="icon-home"></i><span data-translate="dashboard">首页</span></a>-->
+						</li>
+						<li class="nav-parent" id="liE28C25B0">
+							<a href=""><i class="glyphicon glyphicon-alert"></i><span data-translate="E28C25B0">财务管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ulE28C25B0" style="">
+								<li>
+									<a url="../financeManagement/financeSummary.html" href="javascript:void(0)" data-translate="A979AC7F">汇总</a>
+								</li>
+								<li>
+									<a url="../financeManagement/financeForm.html" href="javascript:void(0)" data-translate="CDCBF646">财务报表</a>
+								</li>
+								<li>
+									<a url="../financeManagement/dataCharts.html" href="javascript:void(0)" data-translate="A40E2559">数据图</a>
+								</li>
+								<li>
+									<a url="../financeManagement/rechargeMsg.html" href="javascript:void(0)" data-translate="694D3B98">充值</a>
+								</li>
+								<li>
+									<a url="../page1/page1.html" href="javascript:void(0)" data-translate="B9784C7F">转账</a>
+								</li>
+								<li>
+									<a url="../page1/page1.html" href="javascript:void(0)" data-translate="F459AC7F">提现</a>
+								</li>
+								<li>
+									<a url="../page1/page1.html" href="javascript:void(0)" data-translate="A97B9C7F">预存额</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li89D35C70">
+							<a url="../page1/page1.html" href="javascript:void(0)"><i class="glyphicon glyphicon-bullhorn"></i><span data-translate="89D35C70">日志管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul89D35C70" style="">
+								<li>
+									<a url="/uv/professional/professionalList.jsp" href="javascript:void(0)" data-translate="A98A387A">日志列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li1FD6D849">
+							<a href=""><i class="glyphicon glyphicon-flag"></i><span data-translate="1FD6D849">统计管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul1FD6D849" style="">
+								<li>
+									<a url="/ecmes/orgstructure/orgstructure.jsp" href="javascript:void(0)" data-translate="F584F0C6">用户统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/ecteam/ecteamList.jsp" href="javascript:void(0)" data-translate="3A320980">充值统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/supplies/suppliesList.jsp" href="javascript:void(0)" data-translate="2584563F">消费统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/outreach/outreachList.jsp" href="javascript:void(0)" data-translate="279E1202">提现统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/expert/expertList.jsp" href="javascript:void(0)" data-translate="411EF266">转账统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/ecDangerPoints/dangerPointsList.jsp" href="javascript:void(0)" data-translate="E83B5815">服务量统计</a>
+								</li>
+								<li>
+									<a url="/ecmes/ecDangerPoints/dangerPointsList.jsp" href="javascript:void(0)" data-translate="E83F7815">需求量统计</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li2D84D079">
+							<a href=""><i class="glyphicon glyphicon-blackboard"></i><span data-translate="2D84D079">认证管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul2D84D079" style="">
+								<li>
+									<a url="/ecmes/schedule/calendar.jsp" href="javascript:void(0)" data-translate="BC665E70">认证信息</a>
+								</li>
+								<li>
+									<a url="/ecmes/schedule/scheduleList.jsp" href="javascript:void(0)" data-translate="7249A107">认证审核</a>
+								</li>
+								<li>
+									<a url="/ecmes/schedule/scheduleHistoryList.jsp" href="javascript:void(0)" data-translate="13D072D7">预设认证</a>
+								</li>
+								<li>
+									<a url="/ecmes/schedule/scheduleHistoryList.jsp" href="javascript:void(0)" data-translate="73D072D7">预设模板</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="liB4CABF83">
+							<a href=""><i class="glyphicon glyphicon-stats"></i><span data-translate="B4CABF83">公司管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ulB4CABF83" style="">
+								<li>
+									<a url="/ecmes/statistics/planstats.jsp" href="javascript:void(0)" data-translate="5A974F5F">公司信息</a>
+								</li>
+								<li>
+									<a url="/ecmes/statistics/manuvestats.jsp" href="javascript:void(0)" data-translate="DCE1E519">公司审核</a>
+								</li>
+								<li>
+									<a url="/ecmes/statistics/trainstats.jsp" href="javascript:void(0)" data-translate="F507EF58">挂靠关系</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="liF9D31C4F">
+							<a href=""><i class="glyphicon glyphicon-envelope"></i><span data-translate="F9D31C4F">订单管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ulF9D31C4F" style="">
+								<li>
+									<a url="../orderManagement/orderList.html" href="javascript:void(0)" data-translate="E28E8B57">订单列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0FACAA8C">行程管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../travelManagement/travelList.html" href="javascript:void(0)" data-translate="A80A387A">行程列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F54CAA8C">服务管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../serviceManagement/serviceList.html" href="javascript:void(0)" data-translate="A98A387A">服务列表</a>
+								</li>
+
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F54CAA8C">规则管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="/uv/professional/professionalList.jsp" href="javascript:void(0)" data-translate="A98A387A">规则设置</a>
+								</li>
+
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F54CAA8C">客服管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../customerService/customerService.html" href="javascript:void(0)" data-translate="A98A387A">客服列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="021CAA8C">需求管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../needManagement/needList.html" href="javascript:void(0)" data-translate="A80A357A">需求列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F35AA8C">会员管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../membersManagement/usersManagement.html" href="javascript:void(0)" data-translate="A8785387A">会员列表</a>
+								</li>
+								<li>
+									<a url="../membersManagement/usersGrowth.html" href="javascript:void(0)" data-translate="A8785387A">会员成长</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F35AA8C">评论管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../evaluateManagement/serversEvaluateList.html" href="javascript:void(0)" data-translate="A8785387A">服务者评论</a>
+								</li>
+								<li>
+									<a url="../evaluateManagement/demandersEvaluateList.html" href="javascript:void(0)" data-translate="A8785387A">需求者评论</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="0F35AA8C">消息管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../messagesManagement/systemMessagesList.html" href="javascript:void(0)" data-translate="A8785387A">系统消息</a>
+								</li>
+								<li>
+									<a url="../messagesManagement/notificationMessagesList.html" href="javascript:void(0)" data-translate="A8785387A">通知消息</a>
+								</li>
+								<li>
+									<a url="../messagesManagement/systemMessagesTemplate.html" href="javascript:void(0)" data-translate="A8785387A">系统消息模板</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="021CAA8C">活动管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../activityManagement/activityManagement.html" href="javascript:void(0)" data-translate="A80A357A">活动列表</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="021CAA8C">营销管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../marketingManagement/userManagement.html" href="javascript:void(0)" data-translate="A80A357A">服务置顶</a>
+								</li>
+								<li>
+									<a url="../marketingManagement/advertisingManagement.html" href="javascript:void(0)" data-translate="A80A357A">广告位管理</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="021CAA8C">App业务</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../appService/priceManagement/priceManagement.html" href="javascript:void(0)" data-translate="A80A357A">价格管理</a>
+								</li>
+								<li>
+									<a url="../appService/serviceTypeManagement/serviceTypeManagement.html" href="javascript:void(0)" data-translate="A80A357A">分类管理</a>
+								</li>
+								<li>
+									<a url="../appService/tagManagement/tagManagement.html" href="javascript:void(0)" data-translate="A80A357A">标签管理</a>
+								</li>
+								<li>
+									<a url="../appService/freightManagement/freightManagement.html" href="javascript:void(0)" data-translate="A80A357A">货运管理</a>
+								</li>
+								<li>
+									<a url="/uv/professional/professionalList.jsp" href="javascript:void(0)" data-translate="A80A357A">钱找项目</a>
+								</li>
+								<li>
+									<a url="../appService/sharetoolsManagement/sharetoolsManagement.html" href="javascript:void(0)" data-translate="A80A357A">共享工具</a>
+								</li>
+								<li>
+									<a url="../appService/journeyAssistant/journeyAssistant.html" href="javascript:void(0)" data-translate="A80A357A">行程助手</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent" id="li0FACAA8C">
+							<a href=""><i class="glyphicon glyphicon-cog"></i><span data-translate="021CAA8C">系统管理</span><span class="fa arrow"></span></a>
+							<ul class="children collapse" id="ul0FACAA8C" style="">
+								<li>
+									<a url="../../../hd_app/modules/systemManagement/roleManagement/roleManagement.html" href="javascript:void(0)" data-translate="A80A357A">角色管理</a>
+								</li>
+								<li>
+									<a url="../../../hd_app/modules/systemManagement/userManagement/userManagement.html" href="javascript:void(0)" data-translate="A80A357A">用户管理</a>
+								</li>
+								<li>
+									<a url="../../../hd_app/modules/systemManagement/dataManagement/dataManagement.html" href="javascript:void(0)" data-translate="A80A357A">数据字典管理</a>
+								</li>
+								<li>
+									<a url="../../../hd_app/modules/systemManagement/dataManagement.html" href="javascript:void(0)" data-translate="A80A357A">菜单管理</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- SIDEBAR WIDGET FOLDERS -->
+					<div class="sidebar-widgets" style='height:100px'>
+
+					</div>
+					<div class="sidebar-footer clearfix">
+						<a class="pull-left" href="#" data-rel="tooltip" url="/ghmes/alarm/alarm.info.jsp" data-placement="top" data-original-title="报警"><span style='display:none'>报警</span>
+							<i class="icon-bell"></i></a>
+						<a class="pull-left" href="#" data-rel="tooltip" url="/ghmes/event/eventinfo.jsp" data-placement="top" data-original-title="消息"><span style='display:none'>消息</span>
+							<i class="icon-paper-plane"></i></a>
+						<a class="pull-left toggle_fullscreen" href="#" data-rel="tooltip" data-placement="top" data-original-title="全屏">
+							<i class="icon-size-fullscreen"></i></a>
+						<a class="pull-left btn-effect user_logout" href="javascript:void(0)" data-modal="modal-1" data-rel="tooltip" data-placement="top" data-original-title="退出">
+							<i class="icon-power"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- END SIDEBAR -->
+			<div class="main-content">
+				<!-- BEGIN TOPBAR -->
+				<div class="topbar">
+					<div class="header-left">
+						<div class="topnav">
+							<a class="menutoggle" href="#" data-toggle="sidebar-collapsed"><span class="menu__handle"><span>Menu</span></span>
+							</a>
+
+							<ul class="nav nav-horizontal mmenu">
+
+								<li><img class="logobar" alt="" src="../assets/images/logo/logo-white-bar.png">
+								</li>
+								<!-- list elements -->
+								<li class="dropdown mmenu-fw">
+									<a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="100" class="dropdown-toggle">
+										<span class="menuSwitchText">窗口切换 <b class="caret"></b></span><span class="menuSwitchIcon"><i class="fa fa-th"></i></span>
+									</a>
+									<ul class="dropdown-menu fullwidth">
+										<li class="mmenu-content withdesc">
+											<div class="row">
+												<div class="col-sm-12">
+													<ul id='tabhead'>
+														<li id='limain' class='m-2 tabheadli'>
+															<div id='tabmain' class='index-tab bg-blue p-r-10 p-l-10'>首页</div>
+														</li>
+
+														<li id='licloseall' class='m-2 tabheadli' id='lifullmap'>
+															<div id='tabcloseall' class='index-tab btn-danger p-r-10 p-l-10'>关闭所有窗口</div>
+														</li>
+													</ul>
+												</div>
+
+												<!-- end row -->
+											</div>
+										</li>
+									</ul>
+
+								</li>
+								<!-- end list elements -->
+
+							</ul>
+						</div>
+					</div>
+					<div class="header-right">
+						<ul class="header-menu nav navbar-nav">
+							<!-- BEGIN USER DROPDOWN -->
+							<li class="dropdown" id="language-header">
+								<a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									<i class="fa fa-desktop"></i>
+									<span data-translate="Language" id="viewName">视图</span>
+								</a>
+								<ul class="dropdown-menu" id='viewList'>
+									<!--                  <li>-->
+									<!--                    <a href="#" data-lang="en"><img src="../assets/images/flags/usa.png" alt="flag-english"> <span>English</span></a>-->
+									<!--                  </li>-->
+									<!--                  <li>-->
+									<!--                    <a href="#" data-lang="es"><img src="../assets/images/flags/spanish.png" alt="flag-english"> <span>Español</span></a>-->
+									<!--                  </li>-->
+									<!--                  <li>-->
+									<!--                    <a href="#" data-lang="fr"><img src="../assets/images/flags/french.png" alt="flag-english"> <span>Français</span></a>-->
+									<!--                  </li>-->
+								</ul>
+							</li>
+							<!-- END USER DROPDOWN -->
+							<!-- BEGIN NOTIFICATION DROPDOWN -->
+							<!-- <li class="dropdown alarmLi" id="messages-header">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="#" onclick="checkAlarmDetails('报警信息查询', '../alarm/alarm.info.jsp');" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <i class="icon-bell"></i>
+                <span id="alarmStatisticsTitle" class="badge badge-danger badge-header" style="visibility:hidden" onclick="hiddenAPoint();">...</span>
+                </a>
+              </li> -->
+							<!-- END NOTIFICATION DROPDOWN -->
+
+							<!-- BEGIN MESSAGES DROPDOWN -->
+							<li class="dropdown messageLi" id="messages-header">
+								<!--<a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">-->
+								<a href="javascript:void(0)" onclick="checkAlarmDetails('事件信息查询', '../event/eventinfo.jsp');" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									<i class="icon-paper-plane"></i>
+									<span id="eventStatisticsTitle" class="badge badge-primary badge-header" style="visibility:hidden" onclick="hiddenEPoint();">...</span>
+								</a>
+							</li>
+							<!-- END MESSAGES DROPDOWN -->
+							<!-- BEGIN USER DROPDOWN -->
+							<li class="dropdown" id="user-header">
+								<a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									<img id="usericon" src="../../assets/images/avatars/user1.png" alt="user image">
+									<span class="username" id='loginuser'>您好, 管理员</span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#" url="../../../hd_app/modules/systemManagement/userInfoUpdate/userInfoUpdate.html"><i class="icon-user"></i><span>我的信息</span></a>
+									</li>
+									<li>
+										<a href="#" url="../../../hd_app/modules/systemManagement/passwordUpdate/passwordUpdate.html"><i class="icon-settings"></i><span>密码修改</span></a>
+									</li>
+									<!--  <li>
+                    <a href="#"><i class="icon-calendar"></i><span>我的日历</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon-settings"></i><span>账户设置</span></a>
+                  </li> -->
+									<li>
+										<a href="javascript:void(0)" class='user_logout'><i class="icon-logout"></i><span>退出</span></a>
+									</li>
+								</ul>
+							</li>
+							<!-- END USER DROPDOWN -->
+							<!-- CHAT BAR ICON -->
+						</ul>
+					</div>
+					<!-- header-right -->
+				</div>
+				<!-- END TOPBAR -->
+				<!-- BEGIN PAGE CONTENT -->
+				<div id="supplies" class='page-content page-thin' style="padding: 0;">
+					<div id="imain" class='showPage' style="width: 100%;">
+						<iframe src="../membersManagement/usersManagement.html" frameborder="0" style="width: 100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+					</div>
+
+				</div>
+				<!-- END PAGE CONTENT -->
+			</div>
+			<!-- END MAIN CONTENT -->
+		</section>
+
+		<!-- BEGIN SEARCH -->
+		<div id="morphsearch" class="morphsearch">
+			<form class="morphsearch-form">
+				<input class="morphsearch-input" type="search" placeholder="Search..." />
+				<button class="morphsearch-submit" type="submit">Search</button>
+			</form>
+			<div class="morphsearch-content withScroll">
+				<div class="dummy-column user-column">
+					<h2>Users</h2>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar1_big.png" alt="Avatar 1" />
+						<h3>John Smith</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar2_big.png" alt="Avatar 2" />
+						<h3>Bod Dylan</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar3_big.png" alt="Avatar 3" />
+						<h3>Jenny Finlan</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar4_big.png" alt="Avatar 4" />
+						<h3>Harold Fox</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar5_big.png" alt="Avatar 5" />
+						<h3>Martin Hendrix</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/avatars/avatar6_big.png" alt="Avatar 6" />
+						<h3>Paul Ferguson</h3>
+					</a>
+				</div>
+				<div class="dummy-column">
+					<h2>Articles</h2>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/1.jpg" alt="1" />
+						<h3>How to change webdesign?</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/2.jpg" alt="2" />
+						<h3>News From the sky</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/3.jpg" alt="3" />
+						<h3>Where is the cat?</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/4.jpg" alt="4" />
+						<h3>Just another funny story</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/5.jpg" alt="5" />
+						<h3>How many water we drink every day?</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/6.jpg" alt="6" />
+						<h3>Drag and drop tutorials</h3>
+					</a>
+				</div>
+				<div class="dummy-column">
+					<h2>Recent</h2>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/7.jpg" alt="7" />
+						<h3>Design Inspiration</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/8.jpg" alt="8" />
+						<h3>Animals drawing</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/9.jpg" alt="9" />
+						<h3>Cup of tea please</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/10.jpg" alt="10" />
+						<h3>New application arrive</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/11.jpg" alt="11" />
+						<h3>Notification prettify</h3>
+					</a>
+					<a class="dummy-media-object" href="#">
+						<img src="../assets/images/gallery/12.jpg" alt="12" />
+						<h3>My article is the last recent</h3>
+					</a>
+				</div>
+			</div>
+			<!-- /morphsearch-content -->
+			<span class="morphsearch-close"></span>
+		</div>
+		<!-- END SEARCH -->
+
+		<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+		<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+		<script src="../../assets/js/jquery.md5.js"></script>
+		<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+		<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+		<!-- Jquery Cookies, for theme -->
+		<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+		<!-- simulate synchronous behavior when using AJAX -->
+		<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+		<!-- Modal with Validation -->
+		<script src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- Custom Scrollbar sidebar -->
+		<script src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+		<!-- Show Dropdown on Mouseover -->
+		<!-- <script src="../assets/plugins/retina/retina.min.js"></script> -->
+		<!-- Retina Display -->
+		<script src="../../assets/plugins/select2/select2.min.js"></script>
+		<!-- Select Inputs -->
+		<script src="../../assets/plugins/resizeEnd/jQuery.resizeEnd.min.js"></script>
+		<!-- resize plugin -->
+		<script src="../../assets/plugins/icheck/icheck.min.js"></script>
+		<!-- Checkbox & Radio Inputs -->
+		<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+		<!-- Background Image -->
+		<script src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+		<!-- Animated Progress Bar -->
+		<script src="../../assets/js/builder.js"></script>
+		<!-- Theme Builder -->
+		<script src="../../assets/js/sidebar_hover.js"></script>
+		<!-- Sidebar on Hover -->
+		<script src="../../assets/js/application.js"></script>
+		<!-- Main Application Script -->
+		<script src="../../assets/js/plugins.js"></script>
+		<!-- Main Plugin Initialization Script -->
+		<script src="../../assets/js/widgets/notes.js"></script>
+		<!-- Notes Widget -->
+		<script src="../../assets/js/pages/search.js"></script>
+		<!-- Search Script -->
+		<script src="../../assets/plugins/jmsgbox/jquery.msgbox.min.js" type="text/javascript"></script>
+		<!-- BEGIN PAGE SCRIPT -->
+		<script src="../../assets/plugins/noty/jquery.noty.packaged.min.js"></script>
+		<!-- Notifications -->
+		<script src="../../assets/plugins/bootstrap-editable/js/bootstrap-editable.min.js"></script>
+		<!-- Inline Edition X-editable -->
+		<script src="../../assets/plugins/bootstrap-context-menu/bootstrap-contextmenu.min.js"></script>
+		<!-- Context Menu -->
+
+		<script src="../../assets/plugins/metrojs/metrojs.min.js"></script>
+		<!-- Flipping Panel -->
+		<script src="dashboard.js"></script>
+		<!-- END PAGE SCRIPT -->
+
+		<!-- custom -->
+		<script src="../js/ec-common.js"></script>
+		<script src="../js/webapi.js"></script>
+		<script src="../js/pm.js"></script>
+		<!-- <script src="eventToolbar.js"></script>  -->
+		<!-- 加载事件消息工具栏信息 -->
+	</body>
+
+</html>

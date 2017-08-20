@@ -1,0 +1,73 @@
+{
+    "code": 0,
+    "message": "",
+    "data":
+    {
+        "list":
+         [
+                {
+                       "TravelId": "行程单号",
+                       "publisher": "发布人",
+                       "ableGoods": "可装货物",
+                       "unableGoods": "禁装货物",
+                       "startingDate": "出车时间",
+                       "departure": "始发点",
+                       "destination": "终点",
+                       "heightLimit": "限高",
+                       "maxLoad": "载重量",
+                       "vehicleStatus": "车辆状态",
+                       "vehicleInfo": "车型",
+                       "remarks": "备注",
+                       "phone": "电话",
+                       "wayLocation":
+                       [
+                              "城市1",
+                              "城市2",
+                              "城市3"
+                       ]
+                },
+                {
+                       "TravelId": "行程单号",
+                       "publisher": "发布人",
+                       "ableGoods": "可装货物",
+                       "unableGoods": "禁装货物",
+                       "startingDate": "出车时间",
+                       "departure": "始发点",
+                       "destination": "终点",
+                       "heightLimit": "限高",
+                       "maxLoad": "载重量",
+                       "vehicleStatus": "车辆状态",
+                       "vehicleInfo": "车型",
+                       "remarks": "备注",
+                       "phone": "电话",
+                       "wayLocation":
+                       [
+                              "城市1",
+                              "城市2",
+                              "城市3"
+                       ]
+                },
+                {
+                       "TravelId": "行程单号",
+                       "publisher": "发布人",
+                       "ableGoods": "可装货物",
+                       "unableGoods": "禁装货物",
+                       "startingDate": "出车时间",
+                       "departure": "始发点",
+                       "destination": "终点",
+                       "heightLimit": "限高",
+                       "maxLoad": "载重量",
+                       "vehicleStatus": "车辆状态",
+                       "vehicleInfo": "车型",
+                       "remarks": "备注",
+                       "phone": "电话",
+                       "wayLocation":
+                       [
+                              "城市1",
+                              "城市2",
+                              "城市3"
+                       ]
+                }
+         ]
+    }
+}

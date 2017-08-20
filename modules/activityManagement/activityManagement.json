@@ -1,0 +1,80 @@
+{
+      
+     "data":
+     [
+     
+            
+            {
+               "activityId": "活动ID",
+               "activityTitle": "活动主题",
+               "activityName": "活动名称",
+               "activityIdentity":"活动标识",
+               "activityOrder": "31",
+               "activityPic": "../../assets/images/loginlogo.png",
+               "activityUrl": "http://www.baidu.com",
+               "startTime": "活动开始时间",
+               "endTime": "活动结束时间",
+               "activityStatus": "活动状态",
+               "activityDes": "活动描述",
+               "city": "适用地区"
+            },
+            {
+               "activityId": "活动ID",
+               "activityTitle": "活动标题",
+                "activityName": "活动名称",
+               "activityIdentity":"活动标识",
+               "activityOrder": "1",
+               "activityPic": "../../assets/images/loginlogo.png",
+               "activityUrl": "https://v.qq.com",
+               "startTime": "活动开始时间",
+               "endTime": "活动结束时间",
+               "activityStatus": "活动状态",
+               "activityDes": "活动描述",
+               "city": "适用地区"
+            },
+            {
+               "activityId": "活动ID",
+               "activityTitle": "活动标题",
+                "activityName": "活动名称",
+               "activityIdentity":"活动标识",
+               "activityOrder": "111",
+               "activityPic": "../../assets/images/loginlogo.png",
+               "activityUrl": "http://vip.iqiyi.com/",
+               "startTime": "活动开始时间",
+               "endTime": "活动结束时间",
+               "activityStatus": "活动状态",
+               "activityDes": "活动描述",
+               "city": "适用地区"
+            },
+            {
+               "activityId": "活动ID",
+               "activityTitle": "活动标题",
+                "activityName": "活动名称",
+               "activityIdentity":"活动标识",
+               "activityOrder": "112",
+               "activityPic": "../../assets/images/loginlogo.png",
+               "activityUrl": "页面链接",
+               "startTime": "活动开始时间",
+               "endTime": "活动结束时间",
+               "activityStatus": "活动状态",
+               "activityDes": "活动描述",
+               "city": "适用地区"
+            },
+            {
+               "activityId": "活动ID",
+               "activityTitle": "活动标题",
+                "activityName": "活动名称",
+               "activityIdentity":"活动标识",
+               "activityOrder": "21",
+               "activityPic": "../../assets/images/loginlogo.png",
+               "activityUrl": "页面链接",
+               "startTime": "活动开始时间",
+               "endTime": "活动结束时间",
+               "activityStatus": "活动状态",
+               "activityDes": "活动描述",
+               "city": "适用地区"
+            }
+     ],
+		  "code": 0,
+		  "messages": "查询成功"
+}

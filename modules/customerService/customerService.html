@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="admin-themes-lab">
+	<meta name="author" content="themes-lab">
+	<link rel="shortcut icon" href="../assets/images/favicon.png"
+		  type="image/png">
+	<title>海道APP管理系统</title>
+	<style>
+		.weight>input {
+			border:none;
+			height: 25px;
+			background-color: #ccc;
+			color:green;
+			border-radius: 3px;
+			width: 100%;
+		}
+		h2 {
+			margin: 10px 0 !important;
+		}
+		.messageList {
+			/*margin-right: 15%;*/
+			/*margin-left: 15px;*/
+			margin-left: 15px;
+			margin-right: 30px;
+		}
+		.messageList li {
+			list-style: none;
+			background-color:#f0f0e3;
+			border-radius: 10px;
+			padding: 9px 15px 50px 30px;
+			box-shadow: 0px 1px 2px #ccc;
+			position: relative;
+			margin-bottom: 10px;
+		}
+		.icheckbox_flat-blue {
+			left: -20px;
+		}
+		.messageList p {
+			margin-top: 10px;
+		}
+		.children li {
+			list-style:none;
+			background-color: #fafaf3;
+			border-radius: 10px;
+			padding: 15px 15px 5px 20px;
+			box-shadow: 0px 1px 2px #ccc;
+		}
+		.form-control {
+			border: 1px solid #ccc !important;
+			background-color: #fff !important;
+		}
+		.icon-magnifier {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			color:#ddd;
+		}
+		.admin {
+
+			float: left;
+		}
+		.admin span {
+			color:#c45894;
+		}
+		.leaveTime {
+			color:#999;
+			float: right;
+		}
+		.control-select {
+			margin-bottom: 10px;
+		}
+	</style>
+	<link href="../../assets/css/style.css" rel="stylesheet" />
+	<link href="../../assets/css/theme.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../assets/css/ui.css">
+	<link rel="stylesheet" href="../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+
+</head>
+<body class="">
+<section>
+	<div class="main-content main-content-page">
+		<!-- BEGIN PAGE CONTENT -->
+		<div class="page-content" style="padding:0 30px">
+
+			<div class="header">
+				<h2>
+					<strong>客户服务</strong>
+				</h2>
+				<div class="breadcrumb-wrapper">
+					<span id="expertHover" data-toggle="modal" data-target="#function_declaration_Modal" data-backdrop=""><i class="icon-question"></i></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-content pagination2">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<div class="head">
+										<div class="row">
+
+
+											<div class="form-group col-md-12">
+
+												<div class="col-sm-3  col-xs-6 control-select">
+													<select class="form-control" id="psite">
+														<option >回复状态</option>
+														<option >待回复</option>
+														<option >已回复</option>
+														<option >已关闭</option>
+														<option >已删除</option>
+													</select>
+												</div>
+
+												<div class="col-sm-3 col-xs-6 control-select">
+													<div class="append-icon">
+														<input id="btnSearchName" class="form-control" placeholder="留言内容搜索" type="text">
+														<i class="icon-magnifier"></i>
+													</div>
+												</div>
+												<div class="col-sm-3 col-xs-6 control-select">
+													<div class="input-group date form_date col-sm-12 chooseTime"  data-link-field="dtp_input2" style="padding: 0 15px">
+														<input class="form-control" size="16" type="text" placeholder="开始时间">
+														<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+														<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+													</div>
+												</div>
+												<div class="col-sm-3 col-xs-6 control-select">
+													<div class="input-group date form_date col-sm-12 chooseTime"  data-link-field="dtp_input2" style="padding: 0 15px">
+														<input class="form-control" size="16" type="text" placeholder="结束时间">
+														<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+														<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="messageList">
+											<li>
+												<div class="icheckbox_flat-blue" style="position: relative;"></div>
+												<span class="glyphicon glyphicon-remove closeMessage" style="position: absolute; right: 10px;top:10px;cursor:pointer;"></span>
+												<h2>留言需要改进</h2>
+												<div class="clearfix"><div class="admin">留言人：<span>周梦华</span></div><div class="leaveTime">2017-7-28 19:50:51</div></div>
+												<p style="text-indent:1em">这款APP在客服留言问题上，还有些问题，我可以提一些建议：**********************望采纳。</p>
+												<ul class="children" style="margin-left: 20px">
+													<li>
+														<div class="clearfix"><div class="admin">客服回复：<span>周志磊</span></div><div class="leaveTime">2017-7-28 19:50:51</div></div>
+														<p style="text-indent:1em" maxlength="5">您的建议已采纳，感谢您的建议。</p>
+													</li>
+												</ul>
+												<a href="javascript:;" title="编辑" class="reply btn btn-sm btn-warning" style="position: absolute; right: 15px; bottom:10px;">回复</a>
+												<a href="javascript:;" title="提交" class="submit btn btn-sm btn-success" style="position: absolute; right: 15px; bottom:10px;display:none">提交</a>
+												<a href="javascript:;" title="取消" class="cancel btn btn-sm btn-default" style="position: absolute; right:70px; bottom:10px;display:none">取消</a>
+											</li>
+									</ul>
+									<div style="position: relative; left: 25px;display: inline-block;line-height: 30px;">
+										<div class="icheckbox_flat-blue" id="allChecked" style="vertical-align: middle" ></div>  &nbsp;全选&nbsp;&nbsp;&nbsp;
+										<a href="javascript:;" title="删除" class="compile btn btn-sm btn-danger" id="delete">删除</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+		<!-- END PAGE CONTENT -->
+	</div>
+	<!-- END MAIN CONTENT -->
+
+
+
+</section>
+<!-- BEGIN PRELOADER -->
+<div class="loader-overlay">
+	<div class="spinner">
+		<div class="bounce1"></div>
+		<div class="bounce2"></div>
+		<div class="bounce3"></div>
+	</div>
+</div>
+<!-- END PRELOADER -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+		src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+		src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+		src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+		src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+		src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+		src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+		src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+		src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+		src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+		src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+		src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="template.js"></script>
+<script type="text/html" id="template">
+	{{each msg as value}}
+	<li id={{value.id}}>
+		<div class="icheckbox_flat-blue " style="position: relative;"></div>
+		<span title="关闭" class="glyphicon glyphicon-remove closeMessage" style="position: absolute; right: 10px;top:10px;cursor:pointer;"></span>
+		<h2>{{value.title}}</h2>
+		<div class="clearfix"><div class="admin">留言人：<span>{{value.name}}</span></div><div class="leaveTime">{{value.time}}</div></div>
+		<p style="text-indent:1em">{{value.content}}</p>
+		<ul class="children" style="margin-left: 20px">
+			{{each value.reply as value}}
+			<li>
+				<div class="clearfix"><div class="admin">{{value.type}}回复：<span>{{value.name}}</span></div><div class="leaveTime">{{value.time}}</div></div>
+				<p style="text-indent:1em" maxlength="5">{{value.content}}</p>
+			</li>
+			{{/each}}
+		</ul>
+		<a href="javascript:;" title="回复" class="reply btn btn-sm btn-warning" style="position: absolute; right: 15px; bottom:10px;">回复</a>
+		<a href="javascript:;" title="提交" class="submit btn btn-sm btn-success" style="position: absolute; right: 15px; bottom:10px;display:none">提交</a>
+		<a href="javascript:;" title="取消" class="cancel btn btn-sm btn-default" style="position: absolute; right:70px; bottom:10px;display:none">取消</a>
+	</li>
+	{{/each}}
+</script>
+<!-- 外联资源添加 -->
+<script>
+    $(function () {
+        $('.chooseTime').datetimepicker({
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            weekStart: 1,
+            todayHighlight: 1,
+            startView: 2, //这里就设置了默认视图为年视图
+//            minView: 0, //设置最小视图为年视图
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        });
+//        $('.chooseTime').datetimepicker('update', new Date());
+		//反选
+		var select;
+        $(".messageList").on("click",".icheckbox_flat-blue",function () {
+            $(this).toggleClass('checked');
+            var length1 = $(".messageList").find(".icheckbox_flat-blue").length;
+            var length2 = $(".messageList").find(".checked").length;
+            select = $(".messageList").find(".checked").parent()
+            if(length1==length2){
+                $("#allChecked").addClass("checked");
+			}else{
+                $("#allChecked").removeClass("checked");
+			}
+        });
+        //全选
+        $("#allChecked").on("click",function () {
+			$(this).toggleClass("checked");
+			if($(this).hasClass("checked")){
+			    $(".messageList .icheckbox_flat-blue").addClass("checked");
+			}else {
+                $(".messageList .icheckbox_flat-blue").removeClass("checked");
+			}
+        })
+		//关闭留言
+		$(".messageList").on("click",".closeMessage",function () {
+			$(this).parent().remove();
+        })
+		//回复留言
+        $(".messageList").on("click",".reply",function () {
+            $(this).css("display","none").siblings(".btn").css("display","block");
+            var input = '<li class="textarea"><textarea  autofocus style="resize: none; width:100%; border:none;outline: none;background-color:#fff; border-radius: 5px;min-height:100px;padding-left: 10px"></textarea></li>'
+            $(this).siblings(".children").append(input);
+        })
+		//取消留言
+        $(".messageList").on("click",".cancel",function () {
+            $(this).css("display","none").siblings(".reply").css("display","block");
+            $(this).siblings(".submit").css("display","none");
+            $(this).siblings(".children").find(".textarea").remove();
+        })
+		//提交留言
+        $(".messageList").on("click",".submit",function () {
+            var val  = $(this).parent().find(".textarea>textarea").val();
+            var date = Format(new Date(), "yyyy-MM-dd HH:mm:ss");
+            var html = '<li><div class="clearfix"><div class="admin">客服回复：<span>囝囝</span></div><div class="leaveTime">'+ date +'</div></div>'+
+                '<p style="text-indent:1em" maxlength="5">'+ val +'</p></li>';
+            if(!val){
+				layer.msg('您没有输入内容，无法提交！', {
+					time: 2000, //2s后自动关闭
+					btn: [ '知道了']
+				});
+            	return;
+            }else {
+                $(this).css("display","none").siblings(".reply").css("display","block");
+                $(this).siblings(".cancel").css("display","none");
+                $(this).siblings(".children").find(".textarea").remove();
+                $(this).siblings(".children").append(html);
+			}
+
+
+        })
+		//删除留言
+		$("#delete").click(function () {
+		    if($(".messageList").find(".checked").length == 0){
+		        return;
+			}
+            var num1 = layer.open({
+                    content:"确定删除？",
+                    btn:["确认","取消"],
+                    yes:function () {
+                        if($("#allChecked").hasClass("checked")){
+                            $(".messageList").html("");
+                            layer.close(num1);
+                            return;
+                        }
+                        select.remove();
+                        layer.close(num1);
+                    }
+                }
+            );
+        });
+
+        var data = {
+                    "msg":
+                        [
+                            {
+                                "id": "223415656753",
+                                "name": "李四",
+                                "time": "2017-7-31 15:28:45",
+                                "status": "回复状态0：待回复1：已回复2：已关闭3：已删除",
+                                "title": "留言问题",
+                                "content": "这款APP在客服留言问题上，还有些问题，我可以提一些建议",
+                                "reply":
+                                    [
+                                        {
+                                            "type": "客服",
+                                            "name": "张三",
+                                            "time": "2017-8-1 08:40:35",
+                                            "content": "您的建议已采纳，感谢您的建议。"
+                                        },
+                                        {
+                                            "type": "用户",
+                                            "name": "李四",
+                                            "time": "2017-8-1 08:40:35",
+                                            "content": "不客气"
+                                        }
+                                    ]
+                            },
+                            {
+                                "id": "223415656753",
+                                "name": "李四",
+                                "time": "2017-7-31 15:28:45",
+                                "status": "回复状态0：待回复1：已回复2：已关闭3：已删除",
+                                "title": "留言问题",
+                                "content": "这款APP在客服留言问题上，还有些问题，我可以提一些建议",
+                                "reply":
+                                    [
+                                        {
+                                            "type": "客服",
+                                            "name": "张三",
+                                            "time": "2017-8-1 08:40:35",
+                                            "content": "您的建议已采纳，感谢您的建议。"
+                                        },
+                                        {
+                                            "type": "用户",
+                                            "name": "李四",
+                                            "time": "2017-8-1 08:40:35",
+                                            "content": "不客气"
+                                        }
+                                    ]
+                            }
+                        ]
+		}
+		var html = template("template",data);
+        $(".messageList").append(html);
+
+
+
+        /**
+		 * 时间格式化
+         * @param now
+         * @param mask
+         * @constructor
+         */
+
+        function Format(now,mask)
+        {
+            var d = now;
+            var zeroize = function (value, length)
+            {
+                if (!length) length = 2;
+                value = String(value);
+                for (var i = 0, zeros = ''; i < (length - value.length); i++)
+                {
+                    zeros += '0';
+                }
+                return zeros + value;
+            };
+
+            return mask.replace(/"[^"]*"|'[^']*'|\b(?:d{1,4}|m{1,4}|yy(?:yy)?|([hHMstT])\1?|[lLZ])\b/g, function ($0)
+            {
+                switch ($0)
+                {
+                    case 'd': return d.getDate();
+                    case 'dd': return zeroize(d.getDate());
+                    case 'ddd': return ['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat'][d.getDay()];
+                    case 'dddd': return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][d.getDay()];
+                    case 'M': return d.getMonth() + 1;
+                    case 'MM': return zeroize(d.getMonth() + 1);
+                    case 'MMM': return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()];
+                    case 'MMMM': return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][d.getMonth()];
+                    case 'yy': return String(d.getFullYear()).substr(2);
+                    case 'yyyy': return d.getFullYear();
+                    case 'h': return d.getHours() % 12 || 12;
+                    case 'hh': return zeroize(d.getHours() % 12 || 12);
+                    case 'H': return d.getHours();
+                    case 'HH': return zeroize(d.getHours());
+                    case 'm': return d.getMinutes();
+                    case 'mm': return zeroize(d.getMinutes());
+                    case 's': return d.getSeconds();
+                    case 'ss': return zeroize(d.getSeconds());
+                    case 'l': return zeroize(d.getMilliseconds(), 3);
+                    case 'L': var m = d.getMilliseconds();
+                        if (m > 99) m = Math.round(m / 10);
+                        return zeroize(m);
+                    case 'tt': return d.getHours() < 12 ? 'am' : 'pm';
+                    case 'TT': return d.getHours() < 12 ? 'AM' : 'PM';
+                    case 'Z': return d.toUTCString().match(/[A-Z]+$/);
+                    // Return quoted strings with the surrounding quotes removed
+                    default: return $0.substr(1, $0.length - 2);
+                }
+            });
+        };
+
+    })
+</script>
+</body>
+</html>

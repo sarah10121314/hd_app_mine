@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"
+          type="image/png">
+    <title>海道APP管理系统</title>
+    <style>
+        input,button{
+            outline: none !important;
+        }
+        .weight > input {
+            border: none;
+            height: 25px;
+            background-color: #ccc;
+            color: green;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .form-control {
+            border: 1px solid #ccc !important;
+            background-color: #fff !important;
+        }
+        #textarea {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            outline: none;
+            resize: none;
+            border-radius: 2px;
+            height: 100px;
+        }
+        #textarea:focus {
+            border: 1px solid #319db5 ;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);        }
+        .btn.btn-file {
+            background-color: #eee;
+            border:1px solid #ccc;
+        }
+
+        .panel-content {
+            width: 50%;
+        }
+
+        .form-group label {
+            position: static;
+        }
+
+        .iconBox {
+            width: 100%;
+            border: 1px solid #ccc;
+            height: 150px;
+            border-radius: 2px;
+        }
+    </style>
+    <link href="../../../assets/css/style.css" rel="stylesheet"/>
+    <link href="../../../assets/css/theme.css" rel="stylesheet"/>
+    <!--<link href="../../assets/css/ui.css" rel="stylesheet"/>-->
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+</head>
+<body class="">
+<section>
+    <div class="main-content main-content-page">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content" style="padding:0 30px">
+
+            <div class="header">
+                <h2>
+                    <strong>工具详情编辑</strong>
+                </h2>
+                <div class="breadcrumb-wrapper">
+                    <span id="expertHover" data-toggle="modal" data-target="#function_declaration_Modal"
+                          data-backdrop=""><i class="icon-question"></i></span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="row">
+                            <div class="panel-content pagination2 col-md-6 col-sm-8 col-xs-10 col-lg-6">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="head">
+                                            <div class="modal-body">
+                                                <form class=" form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="orgname">工具名称:</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="orgname" class="form-control input-sm"
+                                                                   type="text" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="orgname">工具持有人:</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="" class="form-control input-sm"
+                                                                   type="text" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                        >工具状态:</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-control" id="site">
+                                                                <option >正常</option>
+                                                                <option >下线</option>
+                                                                <option >过期</option>
+                                                                <option >已删除</option>
+                                                                <option >已禁止</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                        >服务区域:</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-control" id="site">
+                                                                <option >秦淮区</option>
+                                                                <option >雨花台区</option>
+                                                                <option >建邺区</option>
+                                                                <option >玄武区</option>
+                                                                <option >浦口区</option>
+                                                                <option >江宁区</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">地址:</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="" class="form-control input-sm"
+                                                                   type="text" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">标题:</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="" class="form-control input-sm"
+                                                                   type="text" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="address">费用:</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="address" class="form-control input-sm"
+                                                                   type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="address">描述:</label>
+                                                        <div class="col-sm-6">
+                                                            <textarea id="textarea" maxlength="100" ></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="display:none">
+                                                        <label class="col-sm-3 control-label">备注</label>
+                                                        <div class="col-sm-6">
+                                                            <input id="orgnote" class="form-control input-sm"
+                                                                   placeholder="" type="text">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                                </button>
+                                                <button type="button" class="btn btn-primary" id="savebtn">
+                                                    确认
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+</section>
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+
+
+
+<script src="../../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../../assets/plugins/datatables/dataTables.select.min.js"></script>
+
+
+<script type="text/javascript" src="../../../assets/plugins/layer/layer.js"></script>
+<script type="text/javascript" src="../../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<!-- 外联资源添加 -->
+<script>
+    $(function () {
+
+        //文件读取
+        document.querySelector('input[type=file]').onchange = function () {
+            var reader = new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload = function () {
+                document.querySelector('.iconBox').style.background = 'url(' + reader.result + ') no-repeat center/cover';
+            }
+        }
+        //加载日期控件
+        $('.chooseTime').datetimepicker({
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            weekStart: 1,
+            todayHighlight: 1,
+            startView: 2, //这里就设置了默认视图为年视图
+//            minView: 0, //设置最小视图为年视图
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        });
+        $('.chooseTime').datetimepicker('update', new Date());
+        /** 起始时间发生改变 查询*/
+//        $('#date-start').datetimepicker().on('changeDate', function(ev){
+//            var startTime = $("#date-start-hidInput").val();
+//            var endTime = $("#date-end-hidInput").val();
+//
+//            //alert(startTime);
+//            //alert(endTime);
+//            var flag = dateCompare(startTime,endTime);
+//
+//            if(!flag){
+//                $("#date-start-hidInput").val(null);
+//                $("#date-start-showInput").val(null);
+//
+//                $("#date-end-showInput").val(null);
+//                $("#date-end-hidInput").val(null);
+//            }else{
+//                if($("#date-start-showInput").val() != "" && $("#date-end-showInput").val() != ""){
+//                    alert("1")
+//                }
+//            }
+//        });
+//
+//        /** 结束时间发生改变 查询*/
+//        $('#date-end').datetimepicker().on('changeDate', function(ev){
+//            var startTime = $("#date-start-hidInput").val();
+//            var endTime = $("#date-end-hidInput").val();
+//
+//            var flag = dateCompare(startTime,endTime);
+//
+//
+//            if(!flag){
+//                $("#date-start-hidInput").val(null);
+//                $("#date-start-showInput").val(null);
+//
+//                $("#date-end-showInput").val(null);
+//                $("#date-end-hidInput").val(null);
+//            }else{
+//                if($("#date-start-showInput").val() != "" && $("#date-end-showInput").val() != ""){
+//
+//                }
+//            }
+//        });
+        /**
+         * 日期比较(yyyy-mm-dd)
+         * @param bgtime
+         * @param endtime
+         * @returns {Boolean}
+         */
+        function dateCompare(bgtime, endtime) {
+            var arr = bgtime.split("-");
+            var starttime = new Date(arr[0], arr[1], arr[2]);
+            var starttimes = starttime.getTime();
+
+            var arrs = endtime.split("-");
+            var lktime = new Date(arrs[0], arrs[1], arrs[2]);
+            var lktimes = lktime.getTime();
+
+            if (starttimes > lktimes) {
+                layer.msg('开始时间大于（等于）结束时间，请检查！', {
+                    //十秒自动关闭
+                    time: 2500
+                });
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    })
+</script>
+</body>
+</html>

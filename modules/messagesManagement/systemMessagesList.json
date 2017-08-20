@@ -1,0 +1,55 @@
+{
+     "data":
+     [
+            {
+                   "messageId": "000001",
+                   "messageTitle": "消息标题fejienie ciueixiaojge i eojjifei ejif ",
+                   "sender": "发送人",
+                   "sendTime": "发送时间",
+                   "messageCont": "消息内容",
+                   "sendStatus": "发送状态",
+                   "receiver": "张三",
+                   "action": "行为",
+                   "actionParas": "行为参数",
+                   "sendType": 0
+            },
+            {
+                   "messageId": "0000002",
+                   "messageTitle": "消息标题fejienie ciueixiaojge i eojjifei ejif ",
+                   "sender": "发送人",
+                   "sendTime": "发送时间",
+                   "messageCont": "消息内容",
+                   "sendStatus": "发送状态",
+                   "receiver": "李四",
+                   "action": "行为",
+                   "actionParas": "行为参数",
+                   "sendType": 1
+            },
+            {
+                   "messageId": "0000003",
+                   "messageTitle": "消息标题fejienie ciueixiaojge i eojjifei ejif ",
+                   "sender": "发送人",
+                   "sendTime": "发送时间",
+                   "messageCont": "消息内容",
+                   "sendStatus": "发送状态",
+                   "receiver": "王五",
+                   "action": "行为",
+                   "actionParas": "行为参数",
+                   "sendType": 1
+            },
+            {
+                   "messageId": "0000004",
+                   "messageTitle": "消息标题fejienie ciueixiaojge i eojjifei ejif ",
+                   "sender": "发送人",
+                   "sendTime": "发送时间",
+                   "messageCont": "消息内容",
+                   "sendStatus": "发送状态",
+                   "receiver": "接收人",
+                   "action": "行为",
+                   "actionParas": "行为参数",
+                   "sendType": 0
+            }
+     ],
+      "code": 0,
+      "messages": "查询成功"
+}

@@ -1,0 +1,27 @@
+﻿{
+      "code": 0,
+      "message": "",
+      "data":
+      {
+            "order":
+            {
+                 "orderId": "121212",
+                 "orderNumber": "100001",
+                 "serviceName": "保洁",
+                 "payer": "下单人",
+                 "orderTaker": "接单人",
+                 "status": "2",
+                 "price": "金额",
+                 "orderCreateDate": "下单时间",
+                 "orderTakeDate": "接单时间",
+                 "orderFinishDate": "完成时间",
+                 "address": "所属地址",
+                 "phone": "下单人电话",
+                 "payType": "支付宝",
+                 "payId": "流水号",
+                 "commentStar": "评价星别（0-10）",
+                 "cusComment": "客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价",
+                 "busComment": "客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价客户评价"
+             }
+      }
+}

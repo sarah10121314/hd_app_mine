@@ -1,0 +1,13 @@
+.labelWidth{width: 150px;}
+.divLabWidth{width: 190px;}
+.force-table-responsive {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #E9E9E9;
+  border: none;
+  margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  width: 100%;
+}

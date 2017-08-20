@@ -1,0 +1,43 @@
+{
+      
+     "data":
+     [
+        {
+               "carTypeId": "车型ID",
+               "type": "类型",
+               "outputVolume": "排量",
+               "carTypeName": "车型名称",
+               "brand": "品牌"
+            },
+        {
+               "carTypeId": "车型ID",
+               "type": "类型",
+               "outputVolume": "排量",
+               "carTypeName": "车型名称",
+               "brand": "品牌"
+            },
+        {
+               "carTypeId": "车型ID",
+               "type": "类型",
+               "outputVolume": "排量",
+               "carTypeName": "车型名称",
+               "brand": "品牌"
+            },
+        {
+               "carTypeId": "车型ID",
+               "type": "类型",
+               "outputVolume": "排量",
+               "carTypeName": "车型名称",
+               "brand": "品牌"
+            },
+        {
+               "carTypeId": "车型ID",
+               "type": "类型",
+               "outputVolume": "排量",
+               "carTypeName": "车型名称",
+               "brand": "品牌"
+            }
+     ],
+      "code": 0,
+      "messages": "查询成功"
+}

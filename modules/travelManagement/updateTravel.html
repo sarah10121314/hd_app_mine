@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息修改</title>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <!--<link href="../../assets/css/ui.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="updateTravel.css">
+    <!--<link rel="stylesheet" href="ui1.css">-->
+    <script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div id="menu_addButton_addButtonForm" class="form-horizontal">
+    <input type="hidden" id="userId" name="userId" value="0">
+    <input type="hidden" id="resid" name="resid" value="">
+
+
+
+</div>
+<div class="main-content-page main-content" style="background-color:white;">
+    <div class="page-content" >
+        <div class="page-header form-group" style="margin-top: 20px;">
+            <h4><strong>修改行程</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="travelList.html">返回行程列表</a></font></h4>
+            <!--<div class="page-header" style="margin-top: 20px;">-->
+
+        </div>
+
+        <div style="padding:10px 30px 10px 30px;background-color:white;border-radius:5px">
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label">行程单号：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="travelId" readonly="readonly" class="form-control">
+                    <span id="travelIdfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">下单人：</label>
+                <div class="control-select col-sm-3">
+                    <input type="text" id="publisher" readonly="readonly" class="form-control">
+                    <span id="publisherfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <!--<label id="pwdName" style="color:red;">密码不能为空且密码为6到10位</label>-->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">出发时间：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="startingDate" readonly="readonly" class="form-control col-sm-2">
+                    <span id="startingDatefb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <label id="pwdName2" style="color:red;"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">联系电话：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="phone" readonly="readonly" class="form-control">
+                    <span id="phonefb" class="form-control-feedback"></span>
+                </div>
+
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <label id="trueName" style="color:red;"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">状态：</label>
+                <div class="col-sm-3 has-feedback">
+                    <select class="form-control select" id="vehicleStatus">
+                        <option value="0">正常</option>
+                        <option value="1">下线</option>
+                        <option value="2">过期</option>
+                        <option value="3">已删除</option>
+                        <option value="4">已禁止</option>
+                    </select>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">行程：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="wayLocation" readonly="readonly" class="form-control" >
+                    <span id="wayLocationfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">*</label>
+                <label id="mobileName" style="color:red;"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">车辆信息：</label>
+                <div class="col-sm-3 has-feedback">
+                    <input type="text" id="vehicleInfo" readonly="readonly" class="form-control">
+                    <span id="vehicleInfofb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">限高：</label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="heightLimit" readonly="readonly" class="form-control">
+                    <span id="heightLimitfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <!--<input id="icon" type="hidden" value="/uv/assets/usericon/0.jpg">-->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">可装货物：</label>
+
+                <div class="col-sm-8 col-md-3">
+                    <input type="text" id="ableGoods" readonly="readonly" class="form-control">
+                    <span id="ableGoodsfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <input id="signature" type="hidden" value="">
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">禁装货物：</label>
+
+                <div class="col-sm-8 col-md-3">
+                    <input type="text" id="unableGoods" readonly="readonly" class="form-control">
+                    <span id="unableGoodsfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+                <input id="s" type="hidden" value="">
+            </div>
+
+            <div class="form-group pay" >
+                <label class="col-sm-2 control-label" >载重：</label>
+
+                <div class="col-sm-8 col-md-3">
+                    <input type="text" id="maxLoad" readonly="readonly" class="form-control">
+                    <span id="maxLoadfb" class="form-control-feedback"></span>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+            <div class="form-group pay" >
+                <label class="col-sm-2 control-label" >备注：</label>
+
+                <div class="col-sm-8 col-md-3">
+                    <textarea type="text" id="remarks"  readonly="readonly" class="form-control">
+                    </textarea>
+                </div>
+                <label style="color:red; font-size:x-large">&nbsp;</label>
+            </div>
+            <div class="form-group upcomment" style="">
+                <button class="btn btn-primary" id="update_submit" >提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+<script src="../../js/ec-common.js"></script>
+<script src="../../js/webapi.js"></script>
+<script type="text/javascript" src="updateTravel.js"></script>
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+</body>
+</html>

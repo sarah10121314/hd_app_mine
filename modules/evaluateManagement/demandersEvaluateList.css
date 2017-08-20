@@ -1,0 +1,8 @@
+.append-icon i{top:2px!important;}
+
+/*.datetimepicker td, .datetimepicker th{width:20px;}*/
+.datetimepicker .datetimepicker-days th.switch{width:145px;}
+/*.datetimepicker table.table-condensed thead tr:nth-child(0) th.switch{width:145px;}*/
+.datetimepicker th.dow{width:20px;}
+/*.switch{display:inline;}*/
+ 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   	<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/png">
+	    <title>新增系统消息模板</title>
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link href="../../assets/css/theme.css" rel="stylesheet" />
+		<!--<link href="../../assets/css/ui.css" rel="stylesheet" />-->
+		<link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+		<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" />
+		<link href="../../assets/plugins/jmsgbox/css/jquery.msgbox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="addSystemMessageTemplate.css" />
+		<script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+    <body>
+    	<!--<input type="hidden" id="hide_basePath" value="http://192.168.1.102:8000/EC.Web/">-->
+    	<div class="container-fluid">
+    		<div class="page-header">
+	            <h2><strong>新增系统消息模板</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="systemMessagesTemplate.html">返回系统消息模板列表</a></font></h2>
+            </div>  
+			<div id="menu_addButton_addButtonForm" class="form-horizontal">
+         		
+				<div class="form-group">
+					<label class="col-sm-2 control-label">模板标识：</label>
+					<div class="col-sm-3">
+						<input type="text" id="messageTitle" onblur="checkPwd(this);" class="form-control" name="messageTitle">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">模板标题：</label>
+					<div class="col-sm-3">
+						<input type="text" id="sendTime" onblur="checkPwd(this);" class="form-control" name="sendTime">
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">模板内容：</label>
+					<div class="col-sm-3" style="margin-top:5px;">
+						<textarea rows="6" cols="10" id="messageCont" class="form-control" name="messageCont"></textarea>
+					</div>
+					<label id="trueName" style="color:red;"></label>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">行为：</label>
+					<div class="col-sm-3">
+						<input type="text" id="action" class="form-control" name="action">
+					</div>
+					
+					<label id="emailName" style="color:red;"></label>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">行为参数：</label>
+					<div class="col-sm-3">
+						<input type="text" id="actionParas" class="form-control">
+					</div>
+					<label id="pwdName2" style="color:red;"></label>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-3 has-feedback">
+						<button type="button" class="btn btn-primary" onClick="addOrUpdate(); style="margin-right:30px;">确定</button>
+						<button type="button" class="btn btn-default">取消</button>
+					</div>
+				</div>
+				
+			</div>
+        </div>
+        <script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/icheck/icheck.min.js"></script>
+		<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+		<!-- Time Picker -->
+		<script type="text/javascript" src="../../assets/plugins/jquery-moment/moment.js"></script>
+		<!-- moment -->
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+        <!--<script src="../js/ec-common.js"></script>-->
+		<!--<script src="../js/webapi.js"></script>-->
+		<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+		<script type="text/javascript" src="queryUserDetail.js"></script>
+	</body>
+</html>

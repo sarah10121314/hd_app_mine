@@ -1,0 +1,22 @@
+{
+      "code": 0,
+      "message": "",
+      "data":
+      {
+             "service":
+             {
+                    "serviceName": "保洁",
+                    "serviceStatus": "0",
+                    "offshelfReason": "",
+                    "serviceStartDate": "2017/8/2 00:00:00",
+                    "serviceFinishDate": "2017/8/9 00:00:00",
+                    "serviceProvider": "张三",
+                    "serviceTags": "保洁",
+                    "price": "280",
+                    "registerPrice": "50",
+                    "introduction": "专业家政服务8年，用心服务。服务类型有：保洁、月嫂、清洁。。。",
+                    "address": "浦口",
+                    "phone": "86547676"
+             }
+      }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"
+          type="image/png">
+    <title>海道APP管理系统</title>
+    <style>
+        .weight>input {
+            border:none;
+            height: 25px;
+            background-color: #ccc;
+            color:green;
+            border-radius: 3px;
+            width: 100%;
+        }
+        .caption {
+            border-top: 1px solid #ccc;
+            border-left:1px solid #ccc;
+        }
+        #leftDelete,#middleDelete,#rightDelete {
+            margin-bottom:0px;
+        }
+        th[colspan="4"] {
+            text-align: center;
+        }
+        #middleTable_wrapper,#rightTable_wrapper,#leftTable_wrapper {
+            border:none;
+            padding:0;
+            overflow-x: inherit;
+            overflow-y: inherit;
+        }
+        .form-group label {
+            position: static;
+        }
+        .form-control {
+            border: 1px solid #ccc !important;
+            background-color: #fff !important;
+        }
+    </style>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <link href="../../assets/css/ui.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+
+</head>
+<body class="">
+<section>
+    <div class="main-content main-content-page">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content" style="padding:0 30px">
+
+            <div class="header">
+                <h2>
+                    <strong>预存额信息</strong>
+                </h2>
+                <div class="breadcrumb-wrapper">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-content pagination2">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="head">
+                                        <div class="row">
+
+
+                                            <div class="form-group col-md-12">
+
+
+                                                <a href="javascript:;">
+                                                    <button type="button" class="btn btn-danger " id="delete">删除&nbsp;
+                                                    </button>
+                                                </a>
+                                                <div class="col-sm-3 col-xs-4 control-select">
+                                                    <div class="append-icon">
+                                                        <input id="SearchName" class="form-control" placeholder="用户名查询"
+                                                               type="text">
+                                                        <i class="icon-magnifier"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-6 control-select">
+                                                    <div class="input-group date form_date col-sm-12 chooseTime"  data-link-field="dtp_input2" >
+                                                        <input class="form-control" size="16" type="text" placeholder="统计时间">
+                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-striped dataTable"
+                                           id="summaryTable" width="100%">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+
+
+</section>
+
+<!-- BEGIN PRELOADER -->
+<div class="loader-overlay">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src=tableExport.jquery.plugin-master/libs/FileSaver/FileSaver.min.js></script>
+<script src=tableExport.jquery.plugin-master/libs/html2canvas/html2canvas.min.js></script>
+<script src="tableExport.jquery.plugin-master/libs/js-xlsx/xlsx.core.min.js"></script>
+<script src="tableExport.jquery.plugin-master/tableExport.min.js"></script>
+
+<!-- 外联资源添加 -->
+<script>
+    $(function () {
+
+        //初始化表格
+        createSummaryTable();
+
+//        var dataSet;
+//        $.ajax({
+//            url:"userManagement.json",
+//            success:function (msg) {
+//
+//                dataSet = msg.data;
+//
+//            }
+//        })
+        function createSummaryTable(){
+            $("#summaryTable").dataTable({
+
+//				"ajax" : {
+//				 "url" : "./userManagement.json",
+//				 "data": function (data) {
+////				 return $.extend( {}, data, {
+////				 "siteid" : $("#psite").val(),
+////				 "name" : $("#btnSearchName").val()
+//					 console.log(data)
+//				 	}
+//				 },
+
+
+
+                "data": [
+
+                    {
+                        "name": "张三",
+                        "time": "2017-07-22 15:15:11",
+                        "availableBalance": "1500",
+                        "freezeBalance": "100",
+                        "id": "12"
+                    },
+                    {
+                        "name": "李四",
+                        "time": "2017-07-28 15:45:11",
+                        "availableBalance": "30000",
+                        "freezeBalance": "10000",
+                        "id": "13"
+                    }
+                ],
+
+                searching : false,
+                lengthChange : false, // 是否启用设置每页显示记录数
+                "language": {
+                    "sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示 _MENU_ 条",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sEmptyTable": "抱歉， 没有找到",
+                    "sInfo": '显示 _START_ 到 _END_ 条　共 _TOTAL_ 条',
+                    "sInfoEmpty": "没有记录",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "sProcessing":"正在加载中...",
+                    "sSearch": "搜索：",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "上一页",
+                        "sNext": "下一页",
+                        "sLast": "末页"
+                    }
+                },
+                "pagingType": "full_numbers",//分页 有first last
+                "columns" : [
+                    {
+                        "title": '<div class="icheckbox_flat-red allChecked" style="vertical-align: middle" ></div>全选',
+                        "data": "null",
+                        "name": "outreach.company",
+                        "visible": true,
+                        "orderable": false,
+                        "render": function (data, type, full, meta) {
+                            var operBtn = '<div class="icheckbox_flat-blue " style="position: relative;"></div>';
+                            return operBtn;
+                        }
+                    },
+                    {
+                        "title" : "用户名",
+                        "data" : "name",
+                        "name" : "outreach.company",
+                        "visible" : true,
+                        "orderable" : false,
+                    },{
+                        "title" : "最新统计时间",
+                        "data" : "time",
+                        "name" : "outreach.dutytel",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+                    {
+                        "title" : "可用余额",
+                        "data" : "availableBalance",
+                        "name" : "outreach.linkman",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+
+                    {
+                        "title" : "冻结余额",
+                        "data" : "freezeBalance",
+                        "name" : " outreach.linktel",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+                    {
+                        "title" : "操作",
+                        "data" : "id",
+                        "visible" : true,
+                        "orderable" : false,
+                        "render" : function(data, type, full, meta) {
+                            var operBtn = '<a href="javascript:;" title="冻结" data-id="'+ data +'" class="freeze btn btn-sm btn-danger">冻结</a><a href="javascript:;" title="解冻" data-id="'+ data +'" class="unfreeze btn btn-sm btn-blue">解冻</a>';
+                            return operBtn;
+                        }
+                    }
+                ],
+//            "order" : [ [ 2, "desc" ] ]
+//            "lengthMenu":[[5,10,25,50,-1],[5,10,25,50,"全部"]]
+
+            });
+        }
+
+        //初始化日期控件
+        $('.chooseTime').datetimepicker({
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            weekStart: 1,
+            todayHighlight: 1,
+            startView: 2, //这里就设置了默认视图为年视图
+//            minView: 0, //设置最小视图为年视图
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        });
+        //全选、反选、批量删除
+        chooseDelete("#summaryTable");
+
+        function chooseDelete(el) {
+            //全选
+            $(el+" thead").on("click",".allChecked",function () {
+                $(this).toggleClass("checked");
+                if($(this).hasClass("checked")){
+                    $(el+ " tbody .icheckbox_flat-blue").addClass("checked");
+                }else {
+                    $(el + " tbody .icheckbox_flat-blue").removeClass("checked");
+                }
+            });
+            //反选
+            var select;
+            $(el).on("click",".icheckbox_flat-blue",function () {
+                $(this).toggleClass('checked');
+                var length1 = $(el+" tbody").find(".icheckbox_flat-blue").length;
+                var length2 = $(el+" tbody").find(".checked").length;
+                select = $(el+" tbody").find(".checked").parents("tr")
+                if(length1==length2){
+                    $(el+" thead").find(".allChecked").addClass("checked");
+                }else{
+                    $(el+" thead").find(".allChecked").removeClass("checked");
+                }
+            });
+            //选择删除
+            $("#delete").on("click",function () {
+                if($(el+" tbody").find(".checked").length == 0){
+                    return;
+                }
+                var num1 = layer.open({
+                        content:"确定删除？",
+                        btn:["确认","取消"],
+                        yes:function () {
+                            if($(el+" thead").find(".allChecked").hasClass("checked")){
+                                $(el+" tbody").html("");
+                                layer.close(num1);
+                                return;
+                            }
+                            select.remove();
+                            layer.close(num1);
+                        }
+                    }
+                );
+            })
+        }
+        //冻结
+        $("#summaryTable").on("click",".freeze",function () {
+            var freeze = layer.open({
+                type:1,
+                title:"提醒",
+                closeBtn:false,
+                area: ['400px', '250px'],
+                shade:0.8,
+                id:"lay-freeze",
+                btn:["确定","取消"],
+                moveType: 1,
+                content:'<div style="padding: 45px;background-color:skyblue; color:#000"><p>您确定要冻结金额吗？</p><div>冻结金额：<input type="text">元</div></div>',
+                yes:function () {
+                    layer.close(freeze);
+                }
+            });
+        });
+        //解冻
+        $("#summaryTable").on("click",".unfreeze",function () {
+            var unfreeze = layer.open({
+                type:1,
+                title:"解冻提醒",
+                closeBtn:false,
+                area: ['400px', '250px'],
+                shade:0.8,
+                id:"lay-freeze",
+                btn:["确定","取消"],
+                moveType: 1,
+                content:'<div style="padding: 45px;background-color:skyblue; color:#000"><p>您确定要解冻金额吗？</p><div>解冻金额：<input type="text">元</div></div>',
+                yes:function () {
+                    layer.close(unfreeze);
+                }
+            });
+        })
+    })
+
+</script>
+</body>
+</html>

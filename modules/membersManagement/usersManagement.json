@@ -1,0 +1,186 @@
+{
+      
+     "data":
+     [
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 1,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                   "accountBalance":
+                   {
+                          "useable": 1000,
+                          "blocked": 100
+                   },
+                    "myGold":"金币",
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                    "trustScore":{
+			                     "serviceTrust":"100",
+			                     "requireTrust":"80"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 1,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                   "accountBalance":
+                   {
+                          "useable": 3000,
+                          "blocked": 2000
+                   },
+                   "myGold":"金币",
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                    "trustScore":{
+			                     "serviceTrust":"80",
+			                     "requireTrust":"90"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 2,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                    "myGold":"金币",
+                   "accountBalance":
+                   {
+                          "useable": 4000,
+                          "blocked": 0
+                   },
+                   "myGold":"金币",
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                    "trustScore":{
+			                     "serviceTrust":"80",
+			                     "requireTrust":"80"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 2,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                   "accountBalance":
+                   {
+                          "useable": 5000,
+                          "blocked": 1000
+                   },
+                    "myGold":"金币",
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                    "trustScore":{
+			                     "serviceTrust":"60",
+			                     "requireTrust":"100"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 3,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                   "accountBalance":
+                   {
+                          "useable": 6000,
+                          "blocked": 0
+                   },
+                    "myGold":"金币",
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                    "trustScore":{
+			                     "serviceTrust":"60",
+			                     "requireTrust":"80"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 3,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                    "myGold":"金币",
+                   "accountBalance":
+                   {
+                          "useable": 7000,
+                          "blocked": 0
+                   },
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                   "trustScore":{
+			                     "serviceTrust":"100",
+			                     "requireTrust":"70"
+             }
+            },
+            {
+                   "userId": "用户ID",
+                   "userName": "用户名",
+                   "userStatus": 3,
+                   "idCard": "身份证号",
+                   "phone": "电话",
+                   "sex": "性别",
+                   "realName": "真实姓名",
+                   "forbiddenFunc": "禁用功能",
+                   "address": "地址",
+                   "headImg": "头像地址",
+                   "authInfo": "认证信息",
+                    "myGold":"金币",
+                   "accountBalance":
+                   {
+                          "useable": 8000,
+                          "blocked": 0
+                   },
+                   "accountBindInfo": "账号绑定信息",
+                   "userLevel": "会员等级",
+                   "trustScore":{
+			                     "serviceTrust":"30",
+			                     "requireTrust":"60"
+             }
+            }
+     ],
+	  "code": 0,
+	  "messages": "查询成功"
+}
+
+

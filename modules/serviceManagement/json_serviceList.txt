@@ -1,0 +1,47 @@
+{
+      "code": 0,
+      "message": "",
+      "data":
+      [
+             {
+				"serviceId": "12345678",
+				"serviceName": "保洁",
+				"serviceProvider": "张三",
+				"serviceStatus": "0",
+				"serviceStartDate": "2017/8/2 00:00:00",
+				"serviceFinishDate": "2017/8/7 00:00:00"
+             },
+			 {
+				"serviceId": "12345679",
+				"serviceName": "开锁",
+				"serviceProvider": "李四",
+				"serviceStatus": "0",
+				"serviceStartDate": "2017/8/2 00:00:00",
+				"serviceFinishDate": "2017/8/7 00:00:00"
+             },
+			 {
+				"serviceId": "12345679",
+				"serviceName": "开锁",
+				"serviceProvider": "李四",
+				"serviceStatus": "0",
+				"serviceStartDate": "2017/8/2 00:00:00",
+				"serviceFinishDate": "2017/8/7 00:00:00"
+             },
+			 {
+				"serviceId": "12345679",
+				"serviceName": "开锁",
+				"serviceProvider": "李四",
+				"serviceStatus": "0",
+				"serviceStartDate": "2017/8/2 00:00:00",
+				"serviceFinishDate": "2017/8/7 00:00:00"
+             },
+			 {
+				"serviceId": "12345679",
+				"serviceName": "开锁",
+				"serviceProvider": "李四",
+				"serviceStatus": "0",
+				"serviceStartDate": "2017/8/2 00:00:00",
+				"serviceFinishDate": "2017/8/7 00:00:00"
+             }
+      ]
+}

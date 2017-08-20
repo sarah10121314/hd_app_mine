@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   	<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../../../assets/images/favicon.png" type="image/png">
+	    <title>新增车型</title>
+		<link href="../../../assets/css/style.css" rel="stylesheet" />
+		<link href="../../../assets/css/theme.css" rel="stylesheet" />
+		<!--<link href="../../../assets/css/ui.css" rel="stylesheet" />-->
+		<link rel="stylesheet" href="../../../assets/plugins/datatables/dataTables.min.css" />
+		<link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+		
+		<link href="../../../assets/plugins/jmsgbox/css/jquery.msgbox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="addCarType.css" />
+		<script src="../../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+    <body>
+    	<!--<input type="hidden" id="hide_basePath" value="http://192.168.1.102:8000/EC.Web/">-->
+    	<div class="container-fluid">
+    		<div class="page-header">
+	            <h2 class=""><strong>新增车型</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="journeyAssistant.html">返回车型列表</a></font></h2>
+            </div>  
+			<div id="menu_addButton_addButtonForm" class="form-horizontal">
+         		<!--<input type="hidden" id="userId" name="userId" value="1abd24ff81f34d779901b09d7d7a34b8">-->
+         		<!--<input type="hidden" id="resid" name="resid" value="">-->
+         		
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">品牌：</label>
+					<div class="col-sm-3 has-feedback">
+						<input type="text" id="brand" onblur="if(checkUserName(this)){checkUserNameRepeat($('#userId').val(), $(this).val(), this);};" class="form-control" name="userName">
+						<span id="userNameFeedBack" class="form-control-feedback"></span>
+					</div>
+					<!--<label style="color:red; font-size:x-large">*</label>
+					<label id="loginName" style="color:red;"></label>-->
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">车型名称：</label>
+					<div class="col-sm-3 has-feedback">
+						<input type="text" id="carTypeName" onblur="checkPwd(this);" class="form-control" name="passWord">
+						<span id="passwordFeedBack" class="form-control-feedback"></span>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">排量：</label>
+					<div class="col-sm-3 has-feedback">
+						<select class="form-control" id="outputVolume">
+							<option value="">请选择</option>
+						</select>
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">类型：</label>
+					<div class=" col-sm-3 has-feedback">
+		            	<select class="form-control" id="type">
+							<option value="">请选择</option>
+							<option value="0">经济</option>
+							<option value="1">商务</option>
+							<option value="2">豪华</option>
+						</select>
+		            </div>
+					<!--<div class="col-sm-3 has-feedback">
+						<input type="text" id="startTime" class="form-control" name="startTime" placeholder="请输入活动开始时间">
+						<span id="realNameFeedBack" class="form-control-feedback"></span>
+					</div>-->
+					<label id="trueName" style="color:red;"></label>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-3 has-feedback">
+						<button type="button" class="btn btn-primary" onClick="addOrUpdate(); style="margin-right:30px;">确定</button>
+						<button type="button" class="btn btn-default">取消</button>
+					</div>
+				</div>
+			</div>
+        </div>
+        <script type="text/javascript" src="../../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+        <!--<script src="../../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>-->
+		<script src="../../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+		<script src="../../../assets/plugins/gsap/main-gsap.min.js"></script>
+		<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+        <script type="text/javascript" src="../../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../../assets/js/jquery.form.js"></script>
+		<!--<script type="text/javascript" src="../../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>-->
+		<script type="text/javascript" src="../../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/icheck/icheck.min.js"></script>
+		<script src="../../../assets/plugins/colorpicker/spectrum.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+		<!--<script type="text/javascript" src="../../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>-->
+		<!-- Time Picker -->
+		<script type="text/javascript" src="../../../assets/plugins/jquery-moment/moment.js"></script>
+		<!-- moment -->
+		<script type="text/javascript" src="../../../assets/plugins/datatables/dataTables.select.min.js"></script>
+		
+        <script src="../js/ec-common.js"></script>
+		<script src="../js/webapi.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/layer/layer.js"></script>
+		<link rel="text/javascript" href="../../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" />
+		<link rel="text/javascript" href="../../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" />
+		<script type="text/javascript" src="addCarType.js"></script>
+	</body>
+</html>

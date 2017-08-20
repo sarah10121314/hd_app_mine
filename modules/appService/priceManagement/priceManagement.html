@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../../assets/images/favicon.png" type="image/png">
+		<title>价格管理</title>
+		<link href="../../../assets/css/style.css" rel="stylesheet">
+		<link href="../../../modules/appService/priceManagement/priceManagement.css" rel="stylesheet" />
+		<link href="../../../assets/css/theme.css" rel="stylesheet">
+		<link href="../../../assets/css/ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../../assets/plugins/datatables/dataTables.min.css" />
+		<link rel="stylesheet" href="../../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+		<link href="../../../assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+		<script src="../../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+
+	<body>
+
+		<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+		<section>
+			<div class="main-content main-content-page">
+				<!-- BEGIN PAGE CONTENT -->
+				<div class="page-content" style="padding-left: 30px;padding-right: 30px;">
+					<div class="header">
+						<h2>
+							<strong>价格管理</strong>
+						</h2>
+						<div class="breadcrumb-wrapper">
+							<ol class="breadcrumb">
+								<!-- <li class="active">编号:30</li> -->
+							</ol>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-content pagination2" id="manageModel">
+							<div class="header">
+								<form role="form" class="form-horizontal " id="ecform">
+
+									<div class="row">
+
+										<div class="form-group col-md-3">
+											<div class="col-sm-9">
+												<select class="form-control" id="eclevel">
+													<!--<option value="-1">分类查询(全部)</option>-->
+													<option value="0">家政</option>
+													<option value="1">货运</option>
+													<option value="2">钱找</option>
+													<option value="3">共享</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group col-md-3 ">
+											<div class="col-sm-9">
+												<select class="form-control" id="ecstatus">
+													<!--<option value="-1">菜单查询(全部)</option>-->
+													<option value="0">月嫂</option>
+													<option value="1">保洁</option>
+													<option value="2">搬家</option>
+													<option value="3">钟点工</option>
+												</select>
+											</div>
+										</div>
+
+										<button onclick="ecdraw()" type="button" class="btn  btn-primary" id="selectec">查询</button>
+									</div>
+								</form>
+							</div>
+
+							<div id="tag_detailsInfo" class="row">
+								<div class="col-lg-12 portlets">
+									<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a href="#xq_tab1_1" data-toggle="tab" onclick="xq_tabChange(1);"><strong>服务价格</strong></a>
+											</li>
+											<li>
+												<a href="#xq_tab1_2" data-toggle="tab" onclick="xq_tabChange(2);"><strong>发单价格</strong></a>
+											</li>
+											<li>
+												<a href="#xq_tab1_3" data-toggle="tab" onclick="xq_tabChange(3);"><strong>接单价格</strong></a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<!-- 服务价格 start -->
+											<div class="tab-pane fade active in" id="xq_tab1_1">
+												<div class="row">
+													<div class="col-md-12">
+														<table class="table table-striped dataTable" id="leftTable">
+														</table>
+													</div>
+												</div>
+											</div>
+											<!-- 服务价格 end -->
+											<!-- 发单价格 start -->
+											<div class="tab-pane fade" id="xq_tab1_2">
+												<div id="tag_baseInfo" class="col-md-12">
+													<div class="form-horizontal form-validation">
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">服务名称:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" disabled="disabled" name="eccontent" class="form-control" id="sendSerName" placeholder="">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">普通价格:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="eccontent" class="form-control" id="sendPrice" placeholder="">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销开始时间:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="datetimepicker" style="cursor:pointer; text-align: center;" readonly="readonly;" class=" form-control" id="sendtimebefore" placeholder="请输入起始时间">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销结束时间:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="datetimepicker" style="cursor:pointer; text-align: center;" readonly="readonly" class=" form-control" id="sendtimeend" placeholder="请输入结束时间">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销价格:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="eccontent" class="form-control" id="sendSalesPrice" placeholder="">
+															</div>
+														</div>
+														<button class="btn btn-warning" type="button" id="updSendPrice">修改</button>
+														<button class="btn btn-blue" type="button" id="saveSendPrice" style="display: none;">保存</button>
+													</div>
+												</div>
+											</div>
+											<!-- 发单价格 end -->
+											<!-- 接单价格 start -->
+											<div class="tab-pane fade" id="xq_tab1_3">
+												<div id="tag_baseInfo" class="col-md-12">
+													<div class="form-horizontal form-validation">
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">服务名称:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="eccontent" class="form-control" id="serveiceName" placeholder="">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">普通价格:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="eccontent" class="form-control" id="resPrice" placeholder="">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销开始时间:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="datetimepicker" style="cursor:pointer; text-align: center;" readonly="readonly" class=" form-control" id="receivetimebefore" placeholder="请输入起始时间">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销结束时间:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="datetimepicker" style="cursor:pointer; text-align: center;" readonly="readonly" class=" form-control" id="receivetimeend" placeholder="请输入结束时间">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6 labelWidth">
+																<label class="col-sm-4 labelWidth">促销价格:</label>
+															</div>
+															<div class="form-group col-sm-6 divLabWidth">
+																<input type="text" name="eccontent" class="form-control" id="recSalesPrice" placeholder="">
+															</div>
+														</div>
+														<button class="btn btn-warning" type="button" id="updResPrice">修改</button>
+														<button class="btn btn-blue" type="button" id="saveResPrice" style="display: none;">保存</button>
+													</div>
+												</div>
+											</div>
+											<!-- 接单价格 end -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- detailmodal  -->
+
+		<!-- end detailmodal -->
+
+		<!-- BEGIN PRELOADER -->
+		<div class="loader-overlay">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</div>
+		<!-- END PRELOADER -->
+
+		<script type="text/javascript" src="../../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+		<script src="../../../assets/plugins/gsap/main-gsap.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+		<!-- Jquery Cookies, for theme -->
+		<script src="../../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+		<!-- simulate synchronous behavior when using AJAX -->
+		<script src="../../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+		<!-- Translate Plugin with JSON data -->
+		<script src="../../../assets/plugins/bootbox/bootbox.min.js"></script>
+		<!-- Modal with Validation -->
+		<script src="../../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- Custom Scrollbar sidebar -->
+		<script src="../../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+		<!-- Show Dropdown on Mouseover -->
+		<script src="../../../assets/plugins/select2/select2.min.js"></script>
+		<!-- Select Inputs -->
+		<script src="../../../assets/plugins/backstretch/backstretch.min.js"></script>
+		<!-- Background Image -->
+		<script src="../../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+		<!-- Animated Progress Bar -->
+		<script src="../../../assets/js/plugins.js"></script>
+		<!-- Main Plugin Initialization Script -->
+		<script src="../../../assets/js/page.js"></script>
+		<!--Main Application Script-->
+
+		<script type="text/javascript" src="../../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+		<!-- Time Picker -->
+		<!-- datatables -->
+		<script type="text/javascript" src="../../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/datatables/jquery.dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+
+		<script type="text/javascript" src="../../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+		<!-- modal -->
+		<script type="text/javascript" src="../../../assets/plugins/jquery-moment/moment.js"></script>
+		<!-- moment -->
+		<!-- eventcheck -->
+		<script src="../../../modules/appService/priceManagement/priceManagement.js"></script>
+		<script src="../../../assets/js/webapi.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/layer/layer.js"></script>
+
+	</body>
+
+</html>

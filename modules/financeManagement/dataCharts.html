@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"
+          type="image/png">
+    <title>海道APP管理系统</title>
+    <style>
+        .weight>input {
+            border:none;
+            height: 25px;
+            background-color: #ccc;
+            color:green;
+            border-radius: 3px;
+            width: 100%;
+        }
+        .caption {
+            border-top: 1px solid #ccc;
+            border-left:1px solid #ccc;
+        }
+        #leftDelete,#middleDelete,#rightDelete {
+            margin-bottom:0px;
+        }
+        th[colspan="4"] {
+            text-align: center;
+        }
+        #middleTable_wrapper,#rightTable_wrapper,#leftTable_wrapper {
+            border:none;
+            padding:0;
+            overflow-x: inherit;
+            overflow-y: inherit;
+        }
+        .form-group label {
+            position: static;
+        }
+        .form-control {
+            border: 1px solid #ccc !important;
+            background-color: #fff !important;
+        }
+        .abtn {
+
+        }
+    </style>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <link href="../../assets/css/ui.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+
+</head>
+<body class="">
+<section>
+    <div class="main-content main-content-page">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content" style="padding:0 30px">
+
+            <div class="header">
+                <h2>
+                    <strong>数据图</strong>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-content pagination2">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="head">
+                                        <div class="row">
+
+
+                                            <div class="form-group col-md-12">
+                                                <div class="col-sm-3 col-xs-6 control-select">
+                                                    <div class="input-group date form_date col-sm-12 chooseTime"  data-link-field="dtp_input2" >
+                                                        <input class="form-control" size="16" type="text" placeholder="开始时间">
+                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   <div id="charts" style="width: 800px;height:500px;">
+
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+
+
+</section>
+
+<!-- BEGIN PRELOADER -->
+<div class="loader-overlay">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src=tableExport.jquery.plugin-master/libs/FileSaver/FileSaver.min.js></script>
+<script src=tableExport.jquery.plugin-master/libs/html2canvas/html2canvas.min.js></script>
+<script src="tableExport.jquery.plugin-master/libs/js-xlsx/xlsx.core.min.js"></script>
+<script src="tableExport.jquery.plugin-master/tableExport.min.js"></script>
+<script src="./echarts.min.js"></script>
+
+<!-- 外联资源添加 -->
+<script>
+    $(function () {
+        //初始化日期控件
+        $('.chooseTime').datetimepicker({
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            todayBtn: true,
+            weekStart: 1,
+            todayHighlight: 1,
+            startView: 2, //这里就设置了默认视图为年视图
+            minView: 2, //设置最小视图为年视图
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        });
+        //图表
+        var myChart = echarts.init(document.getElementById("charts"))
+        var option = {
+            title: {
+                text: '财务数据图'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+//                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+                data:['收入']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['家政','保洁','钱找项目','货运','共享工具','广告'],
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '收入',
+                    min: 0,
+                    max: 80000,
+                    interval: 10000,
+                    axisLabel: {
+                        formatter: '{value} 元'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name:'收入',
+                    type:'bar',
+                    data:[20000, 58600, 43200, 2000, 12500,26578]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    })
+
+</script>
+</body>
+</html>

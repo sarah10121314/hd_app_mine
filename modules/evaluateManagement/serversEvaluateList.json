@@ -1,0 +1,45 @@
+{
+      
+     "data":
+     [
+            {
+               "commentId": "评论ID",
+               "requireName": "需求名称",
+               "demander": "需求者",
+               "commentTime": "评论时间",
+               "commentStatus": 0,
+               "commentator": "评论者",
+               "commentCont": "评论内容"
+            },
+            {
+               "commentId": "评论ID",
+               "requireName": "需求名称",
+               "demander": "需求者",
+               "commentTime": "评论时间",
+               "commentStatus": 1,
+               "commentator": "评论者",
+               "commentCont": "评论内容"
+            },
+            {
+               "commentId": "评论ID",
+               "requireName": "需求名称",
+               "demander": "需求者",
+               "commentTime": "评论时间",
+               "commentStatus": 1,
+               "commentator": "评论者",
+               "commentCont": "评论内容"
+            },
+            {
+               "commentId": "评论ID",
+               "requireName": "需求名称",
+               "demander": "需求者",
+               "commentTime": "评论时间",
+               "commentStatus": 2,
+               "commentator": "评论者",
+               "commentCont": "评论内容"
+            }
+     ],
+  
+      "code": 0,
+      "messages": "查询成功"
+}

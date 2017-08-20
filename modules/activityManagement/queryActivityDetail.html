@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   	<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/png">
+	    <title>活动详情</title>
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link href="../../assets/css/theme.css" rel="stylesheet" />
+		<!--<link href="../../assets/css/ui.css" rel="stylesheet" />-->
+		<link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+		<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" />
+		<link href="../../assets/plugins/jmsgbox/css/jquery.msgbox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="queryActivityDetail.css" />
+		<script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+    <body>
+    	<div class="container-fluid">
+    		<div class="page-header">
+	            <h2 class=""><strong>活动详情</strong><font class="h6">&nbsp;&nbsp;&nbsp;&nbsp;<a a="" href="activityManagement.html">返回活动列表</a></font></h2>
+            </div>  
+			
+			<div id="menu_addButton_addButtonForm" class="form-horizontal">
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动标识：</label>
+					<div class="col-sm-3">
+						<input type="text" id="activityIdentity" class="form-control" name="activityIdentity">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">活动主题：</label>
+					<div class="col-sm-3">
+						<input type="text" id="activityTitle" class="form-control" name="activityTitle">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label">活动名称：</label>
+					<div class="col-sm-3">
+						<input type="text" id="activityTitle" class="form-control" name="activityTitle">
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动开始时间：</label>
+					<div class="col-sm-3">
+						<input type="text" id="startTime" class="form-control" name="startTime">
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动结束时间：</label>
+					<div class="col-sm-3">
+						<input type="text" id="endTime" class="form-control" name="endTime">
+					</div>
+				</div>
+				
+				<!--<div class="form-group">
+				  <label class="col-sm-2 control-label p-r-0">活动开始时间:</label>
+					<div class="col-sm-3">
+                      <input type="text" name="datetimepicker" style="cursor:pointer;" readonly="readonly" class="form-control hasDatepicker" id="timebefore" placeholder="请输入起始时间">
+                    </div>
+				</div>-->
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动图片：</label>
+					<div class="col-sm-3">
+						<img src="" id="activityPic">
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动页面链接：</label>
+					<div class="col-sm-3">
+						<input type="text" id="url" name="url" class="form-control" >
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">适用地区：</label>
+					<div class="col-sm-3">
+						<textarea id="city" name="city" class="form-control bg-white" style="height:100px;"></textarea>
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动描述：</label>
+					<div class="col-sm-3">
+						<textarea id="activityDes" name="activityDes" class="form-control bg-white" style="height:150px;"></textarea>
+					</div>
+				</div>
+				
+     			<div class="form-group">
+					<label class="col-sm-2 control-label">活动序号：</label>
+					<div class="col-sm-3">
+						<input type="text" id="activityOrder" class="form-control" name="activityOrder">
+					</div>
+					<label style="color:dodgerblue;line-height:34px;height:34px;font-weight:400;">数字范围是0-255，数字越小越靠前</label>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-3"  style="text-align: right;">
+						<button type="button" class="btn btn-primary" onclick="javascript:window.location.href="'activityManagement.html'";>关闭</button>
+					</div>
+				</div>
+			</div>
+        </div>
+        <script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/icheck/icheck.min.js"></script>
+		<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+		<!-- Time Picker -->
+		<script type="text/javascript" src="../../assets/plugins/jquery-moment/moment.js"></script>
+		<!-- moment -->
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+        <!--<script src="../js/ec-common.js"></script>-->
+		<!--<script src="../js/webapi.js"></script>-->
+		<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+		<script type="text/javascript" src="queryActivityDetail.js"></script>
+	</body>
+</html>

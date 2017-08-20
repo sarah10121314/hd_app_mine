@@ -1,0 +1,41 @@
+{
+     
+     "data":
+     [
+            {
+                   "templateId": "模板ID",
+                   "templateIdentity": "模板标识",
+                   "templateTitle": "模板标题",
+                   "templateCont": "模板内容",
+                   "action": "行为",
+                   "actionParas": "行为参数"
+            },
+            {
+                   "templateId": "模板ID",
+                   "templateIdentity": "模板标识",
+                   "templateTitle": "模板标题",
+                   "templateCont": "模板内容",
+                   "action": "行为",
+                   "actionParas": "行为参数"
+            },
+            {
+                   "templateId": "模板ID",
+                   "templateIdentity": "模板标识",
+                   "templateTitle": "模板标题",
+                   "templateCont": "模板内容",
+                   "action": "行为",
+                   "actionParas": "行为参数"
+            },
+            {
+                   "templateId": "模板ID",
+                   "templateIdentity": "模板标识",
+                   "templateTitle": "模板标题",
+                   "templateCont": "模板内容",
+                   "action": "行为",
+                   "actionParas": "行为参数"
+            }
+     ],
+     
+      "code": 0,
+      "messages": "查询成功"
+}

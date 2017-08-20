@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"
+          type="image/png">
+    <title>海道APP管理系统</title>
+    <style>
+        .weight>input {
+            border:none;
+            height: 25px;
+            background-color: #ccc;
+            color:green;
+            border-radius: 3px;
+            width: 100%;
+        }
+        .form-control {
+            border: 1px solid #ccc !important;
+            background-color: #fff !important;
+        }
+        .form-group label {
+            position: static;
+        }
+
+    </style>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/theme.css" rel="stylesheet" />
+    <link href="../../assets/css/ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+    <link href="../../assets/plugins/metrojs/metrojs.min.css" rel="stylesheet">
+    <link href="../../assets/plugins/maps-amcharts/ammap/ammap.min.css" rel="stylesheet">
+    <link href="../../assets/plugins/jmsgbox/css/jquery.msgbox.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/plugins/font-awesome-animation/font-awesome-animation.min.css" rel="stylesheet">
+    <script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="">
+<section>
+    <div class="main-content main-content-page">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content" style="padding:0 30px">
+
+            <div class="header">
+                <h2>
+                    <strong>广告位管理</strong>
+                </h2>
+                <div class="breadcrumb-wrapper">
+                    <span id="expertHover" data-toggle="modal" data-target="#function_declaration_Modal" data-backdrop=""><i class="icon-question"></i></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-content pagination2">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="head">
+                                        <div class="row">
+
+
+                                            <div class="form-group col-md-12">
+
+
+                                                <div class="col-sm-3 col-xs-6 control-select">
+                                                    <div class="append-icon">
+                                                        <input id="SearchName" class="form-control" placeholder="名称查询" type="text">
+                                                        <i class="icon-magnifier"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-striped dataTable"
+                                           id="leftTable" width="100%">
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+
+
+</section>
+
+<!-- BEGIN PRELOADER -->
+<div class="loader-overlay">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+<!-- Jquery Cookies, for theme -->
+<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+<!-- simulate synchronous behavior when using AJAX -->
+<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+<!-- Translate Plugin with JSON data -->
+<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+<!-- Modal with Validation -->
+<script
+        src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Scrollbar sidebar -->
+<script
+        src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<!-- Show Dropdown on Mouseover -->
+<script src="../../assets/plugins/select2/select2.min.js"></script>
+<!-- Select Inputs -->
+<!-- Retina Display -->
+<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+<!-- Background Image -->
+<script
+        src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- Animated Progress Bar -->
+<script src="../../assets/js/plugins.js"></script>
+<!-- Main Plugin Initialization Script -->
+<script src="../../assets/js/page.js"></script>
+<!-- Main Application Script -->
+
+<!-- datatable -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/icheck/icheck.min.js"></script>
+<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+<script type="text/javascript"
+        src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+<!-- Time Picker -->
+<script type="text/javascript"
+        src="../../assets/plugins/jquery-moment/moment.js"></script>
+<!-- moment -->
+<script type="text/javascript"
+        src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+
+
+
+<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+
+<!-- 外联资源添加 -->
+<script>
+    $(function () {
+        createLeftTable();
+        var dataSet;
+        $.ajax({
+            url:"userManagement.json",
+            success:function (msg) {
+
+                dataSet = msg.data;
+
+            }
+        })
+        function createLeftTable(){
+
+            $('#leftTable').dataTable({
+
+//				"ajax" : {
+//				 "url" : "./userManagement.json",
+//				 "data": function (data) {
+////				 return $.extend( {}, data, {
+////				 "siteid" : $("#psite").val(),
+////				 "name" : $("#btnSearchName").val()
+//					 console.log(data)
+//				 	}
+//				 },
+
+
+
+                "data":  [
+                    {
+                        "id": "123083120814",
+                        "name": "首页顶部广告",
+                        "width": "1200",
+                        "height": "70",
+                        "adCount": "4",
+                        "enabled": 0
+                    },
+                    {
+                        "id": "123083120544",
+                        "name": "首页底部广告",
+                        "width": "1000",
+                        "height": "200",
+                        "adCount": "2",
+                        "enabled": 1
+                    }
+                ],
+
+
+
+
+//            "data": [
+//                {
+//                    "id": "00001",
+//                    "company": "用户名",
+//                    "userStatus": "会员状态",
+//                    "idCard": "321088xxxxxxxxxx",
+//                    "dutytel": "电话",
+//                    "sex": "性别",
+//                    "linkman": "真实姓名",
+//                    "linktel": "123456",
+//                    "jobs": "101",
+//                    "sitename": "db",
+//                    "authInfo": "认证信息",
+//					"flag":true
+//                },
+//                {
+//                    "id": "00002",
+//                    "company": "用户名",
+//                    "userStatus": "会员状态",
+//                    "idCard": "321088xxxxxxxxxx",
+//                    "dutytel": "电话",
+//                    "sex": "性别",
+//                    "linkman": "真实姓名",
+//                    "linktel": "123456",
+//                    "jobs": "101",
+//                    "sitename": "db",
+//                    "authInfo": "认证信息",
+//                    "flag":true
+//                },
+//                {
+//                    "id": "00003",
+//                    "company": "用户名",
+//                    "userStatus": "会员状态",
+//                    "idCard": "321088xxxxxxxxxx",
+//                    "dutytel": "电话",
+//                    "sex": "性别",
+//                    "linkman": "真实姓名",
+//                    "linktel": "123456",
+//                    "jobs": "99",
+//                    "sitename": "db",
+//                    "authInfo": "认证信息",
+//                    "flag":false
+//                }
+//            ],
+                searching : false,
+                lengthChange : false, // 是否启用设置每页显示记录数
+                "language": {
+                    "sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示 _MENU_ 条",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sEmptyTable": "抱歉， 没有找到",
+                    "sInfo": "显示 _START_ 到 _END_ 条　共 _TOTAL_ 条",
+                    "sInfoEmpty": "没有记录",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "sProcessing":"正在加载中...",
+                    "sSearch": "搜索：",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "上一页",
+                        "sNext": "下一页",
+                        "sLast": "末页"
+                    }
+                },
+                "pagingType": "full_numbers",//分页 有first last
+                "columns" : [
+
+                    {
+                        "title" : "广告位名称",
+                        "data" : "name",
+                        "name" : "outreach.company",
+                        "visible" : true,
+                        "orderable" : true,
+                    },{
+                        "title" : "宽度",
+                        "data" : "width",
+                        "name" : "outreach.dutytel",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+                    {
+                        "title" : "高度",
+                        "data" : "height",
+                        "name" : "outreach.linkman",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+
+                    {
+                        "title" : "广告数",
+                        "data" : "adCount",
+                        "name" : " outreach.linktel",
+                        "visible" : true,
+                        "orderable" : true
+                    },
+                    {
+                        "title" : "是否启用",
+                        "data" : "enabled",
+                        "name" : "outreach.jobs",
+                        "visible" : true,
+                        "orderable" : false,
+                        "render" : function() {
+                            var str = '<div class="icheckbox_flat-blue checked" style="position: relative;"></div>'
+                            return str;
+                        }
+                    },
+                    {
+                        "title" : "操作",
+                        "data" : "id",
+                        "visible" : true,
+                        "orderable" : false,
+                        "class":"abtn",
+                        "render" : function(data, type, full, meta) {
+
+                            var operBtn = '<a href="./adManagement.html" title="管理广告" class="edit btn btn-sm btn-blue">管理广告</a>&nbsp;&nbsp;';
+                            operBtn += '<a  href="./updateAdvertising.html" title="编辑" class="compile btn btn-sm btn-warning">编辑</a>';
+                            return operBtn;
+                        }
+                    } ],
+//            "order" : [ [ 2, "desc" ] ]
+//            "lengthMenu":[[5,10,25,50,-1],[5,10,25,50,"全部"]]
+
+            });
+        }
+
+        $("tbody").on("click",".icheckbox_flat-blue",function () {
+            $(this).toggleClass('checked');
+        });
+
+
+    })
+</script>
+</body>
+</html>

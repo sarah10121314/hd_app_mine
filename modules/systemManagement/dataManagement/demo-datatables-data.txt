@@ -1,0 +1,32 @@
+{
+	"data": [
+        {
+            "planid": "E2F39E876507984DBE2B47926D9626F2",
+            "id": "91F7F2130AF443679BFCEEEDF8107747",
+            "stopdesc": "普通用户",
+            "occurtime": "普通角色",
+            "workflowinstid": "347800;process_1499254619143",
+            "sitename": "wuha",
+            "filename": null,
+            "summarydocid": null,
+            "scene": "角色等级1",
+            "type": 0,
+            "workflowid": "1",
+            "eventname": "类型1"
+        },
+        {
+            "planid": "E2F39E876507984DBE2B47926D9626F2",
+            "id": "0140FD9432C64445AA663D952AF15220",
+            "stopdesc": "管理员",
+            "occurtime": "特殊角色",
+            "workflowinstid": "347741;process_1499242554008",
+            "sitename": "龙滩",
+            "filename": null,
+            "summarydocid": null,
+            "scene": "角色等级2",
+            "type": 0,
+            "workflowid": "2",
+            "eventname": "类型2"
+        }
+    ]
+}    

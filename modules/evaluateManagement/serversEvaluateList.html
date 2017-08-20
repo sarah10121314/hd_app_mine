@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="admin-themes-lab">
+		<meta name="author" content="themes-lab">
+		<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/png">
+		<title>服务者评论管理</title>
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link href="../../assets/css/theme.css" rel="stylesheet" />
+		<link href="../../assets/css/ui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.min.css" />
+		<link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/plugins/layer/skin/layer.css" />
+		<link rel="stylesheet" href="../../assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+		<link rel="text/javascript" href="../../assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" />
+		<link rel="text/javascript" href="../../assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" />
+		<link rel="stylesheet" href="serversEvaluateList.css" />
+		<script src="../../assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+	<body class="">
+		<section>
+			<div class="main-content main-content-page">
+				<!-- BEGIN PAGE CONTENT -->
+				<div class="page-content">
+					<div class="header">
+						<h2>
+							<strong>服务者评论管理</strong>
+						</h2>
+						<div class="breadcrumb-wrapper">
+							 <!--<span id="expertHover" data-toggle="modal" data-target="#function_declaration_Modal" data-backdrop=""><i class="icon-question"></i></span>-->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-content pagination2">
+									<div class="row">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="head">
+												<div class="row">
+													<!--<div class="form-group col-md-7">
+												 	    <button type="button" class="btn btn-success" id="new" ><i class="fa fa-plus"></i>添加</button>
+												 	</div>-->
+												 	
+												 	<div class="form-group col-md-12" style="padding-left:0;">
+														<div class="col-sm-3 control-select">
+															<select class="form-control" id="userStatus">
+																<option value="sendType">评论状态</option>
+																<option value="0">已审核</option>
+																<option value="1">已禁止</option>
+																<option value="2">待审核</option>
+															</select>
+														</div>
+														
+														<div class="col-sm-3 control-select">
+															<div class="append-icon">
+												            	<input id="btnSearchName" class="form-control" placeholder="需求名称搜索" type="text">
+												                <i class="icon-magnifier"></i>
+												            </div>
+											            </div>
+														<div class="col-sm-3 control-select">
+															<div class="append-icon">
+												            	<input id="btnSearchName" class="form-control" placeholder="评论内容搜索" type="text">
+												                <i class="icon-magnifier"></i>
+												            </div>
+											            </div>
+														<div class="col-sm-3 control-select">
+															<div class="append-icon">
+												            	<input id="btnSearchName" class="form-control" placeholder="需求者搜索" type="text">
+												                <i class="icon-magnifier"></i>
+												            </div>
+											            </div>
+													</div>
+													<div class="form-group col-md-12">
+														<div class="col-sm-2 control-select" style="padding-left:0;">
+															<div class="append-icon">
+												            	<input id="btnSearchName" class="form-control" placeholder="评论者搜索" type="text">
+												                <i class="icon-magnifier"></i>
+												            </div>
+											            </div>
+														<div class="col-sm-4 control-select">
+															<label class="col-sm-4 control-label" style="line-height:34px;height:34px;">起始时间: </label>
+															<div class=" col-sm-8 append-icon">
+												            	<input id="startTime" class="form-control" type="text" placeholder="请输入查询起始时间">
+												            </div>
+											            </div>
+														<div class="col-sm-4 control-select">
+															<label class="col-sm-4 control-label" style="line-height:34px;height:34px;">结束时间: </label>
+															<div class=" col-sm-8 append-icon">
+												            	<input id="endTime" class="form-control" type="text" placeholder="请输入查询结束时间">
+												            </div>
+											            </div>
+													</div>
+											    </div>
+											</div>
+											<div class="row">
+												<div class="col-md-7">
+											 	    <button type="button" class="btn btn-success" id="autoCheck" onclick="">自动审核</button>
+											 	</div>
+											</div>
+											<table class="table table-striped dataTable" id="serversEvaluateListTable" width="100%"></table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END PAGE CONTENT -->
+			</div>
+			<!-- END MAIN CONTENT -->
+		</section>
+		<!-- BEGIN PRELOADER -->
+		<div class="loader-overlay">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</div>
+		<!-- END PRELOADER -->
+		<!-- 审核弹出框开始 -->
+		<div class="form-group" id="handCheckCont" style="padding:10px;margin-top:10px;display:none;" >
+          <div class="input-group">
+            <div class="icheck-inline">
+              <label class=""><div class="iradio_flat-blue" style="position: relative;"><input type="radio" name="radio2" data-radio="iradio_flat-blue" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> 通过</label>
+              <label class=""><div class="iradio_flat-blue checked" style="position: relative;"><input type="radio" name="radio2" checked="" data-radio="iradio_flat-blue" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> 禁止</label>
+              <label class=""><div class="iradio_flat-blue" style="position: relative;"><input type="radio" name="radio2" data-radio="iradio_flat-blue" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>恢复评论</label>
+            </div>
+          </div>
+        </div>
+        <!-- 审核弹窗框 结束-->
+		<a href="#" class="scrollup"><i class="fa fa-angle-up"></i> </a>
+		<script src="../../assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+		<script src="../../assets/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+		<script src="../../assets/plugins/gsap/main-gsap.min.js"></script>
+		<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+		<!-- Jquery Cookies, for theme -->
+		<script src="../../assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+		<!-- simulate synchronous behavior when using AJAX -->
+		<script src="../../assets/plugins/translate/jqueryTranslator.min.js"></script>
+		<!-- Translate Plugin with JSON data -->
+		<script src="../../assets/plugins/bootbox/bootbox.min.js"></script>
+		<!-- Modal with Validation -->
+		<script src="../../assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- Custom Scrollbar sidebar -->
+		<script src="../../assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+		<!-- Show Dropdown on Mouseover -->
+		<script src="../../assets/plugins/select2/select2.min.js"></script>
+		<!-- Select Inputs -->
+		<!-- Retina Display -->
+		<script src="../../assets/plugins/backstretch/backstretch.min.js"></script>
+		<!-- Background Image -->
+		<script src="../../assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+		<script src="../../assets/plugins/bootstrap/js/bootstrap-modal.js"></script>
+		
+		<!-- Animated Progress Bar -->
+		<script src="../../assets/js/plugins.js"></script>
+		<!-- Main Plugin Initialization Script -->
+		<script src="../../assets/js/page.js"></script>
+		<!-- Main Application Script -->
+		<!-- datatable -->
+		<script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/jquery.form.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/adaptive-modal/js/jquery.adaptive-modal.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/icheck/icheck.min.js"></script>
+		<script src="../../assets/plugins/colorpicker/spectrum.min.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/datatables/jquery.dataTables_userDef.js"></script>
+		<script type="text/javascript" src="../../assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js"></script>
+		<!-- Time Picker -->
+		<script type="text/javascript" src="../../assets/plugins/jquery-moment/moment.js"></script>
+		<!-- moment -->
+		<script type="text/javascript" src="../../assets/plugins/datatables/dataTables.select.min.js"></script>
+        <!--<script src="../js/ec-common.js"></script>-->
+		<!--<script src="../js/webapi.js"></script>-->
+		<script type="text/javascript" src="../../assets/plugins/layer/layer.js"></script>
+		<script type="text/javascript" src="serversEvaluateList.js"></script>
+	
+	</body>
+</html>
